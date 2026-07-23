@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>IT Профорієнтація — DAN.IT</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+<!-- Start of HubSpot Embed Code -->
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/148955052.js"></script>
+<!-- End of HubSpot Embed Code -->
+<style>
+:root {
+  --dan-violet:#8D59FF; --dan-violet-soft:#E2C6FF; --dan-mint:#23C0AD;
+  --dan-mint-soft:#DCFEBC; --dan-sky-soft:#BBECFF; --dan-yellow-soft:#FCF050;
+  --dan-navy:#1A1A40; --dan-ink:#212121; --dan-ink-2:#40404C; --dan-ink-3:#64646B;
+  --dan-text-muted:#B3B3BF; --dan-text-on-dark:#EDEDF9; --dan-line:#EDEDF9;
+  --dan-bg:#FFFFFF; --dan-bg-2:#F8F8FB;
+  --font-display:"Manrope",-apple-system,sans-serif;
+  --font-body:"Manrope",-apple-system,sans-serif;
+  --r-xl:24px; --r-lg:16px; --r-md:12px; --r-pill:999px;
+  --shadow-card:0 4px 40px rgba(80,81,196,.20);
+  --shadow-inner:0 4px 40px rgba(80,81,196,.15);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--font-body);background:var(--dan-bg-2);color:var(--dan-ink);min-height:100vh;overflow-x:hidden;}
+.screen{display:none;flex-direction:column;align-items:center;min-height:100vh;padding:32px 20px 48px;}
+.screen.active{display:flex;}
+.logo-bar{width:100%;max-width:900px;display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;}
+.logo{font:800 22px/1 var(--font-display);letter-spacing:-.04em;color:var(--dan-ink);}
+.logo span{color:var(--dan-violet);}
+.progress-bar{display:flex;gap:6px;align-items:center;}
+.prog-dot{width:8px;height:8px;border-radius:50%;background:var(--dan-line);transition:background .3s;}
+.prog-dot.done{background:var(--dan-violet);}
+.prog-dot.active{background:var(--dan-ink);width:24px;border-radius:4px;}
+.card{background:var(--dan-bg);border:1px solid var(--dan-line);border-radius:var(--r-xl);box-shadow:var(--shadow-card);padding:40px;width:100%;max-width:900px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:52px;padding:0 28px;border:0;border-radius:var(--r-pill);font:600 16px/1 var(--font-display);letter-spacing:-.02em;cursor:pointer;transition:transform .15s,background .15s,opacity .15s;}
+.btn-primary{background:var(--dan-ink);color:#fff;box-shadow:0 4px 40px -10px rgba(80,81,196,.3);}
+.btn-primary:hover{background:#000;}
+.btn-primary:active{transform:scale(.98);}
+.btn-ghost{background:transparent;color:var(--dan-violet);border:2px solid var(--dan-violet);}
+.btn-ghost:hover{opacity:.8;}
+.pill{display:inline-flex;align-items:center;height:32px;padding:0 14px;border-radius:var(--r-pill);font:700 12px/1 var(--font-display);letter-spacing:-.02em;}
+.eyebrow{font:700 12px/1 var(--font-display);letter-spacing:.06em;text-transform:uppercase;color:var(--dan-violet);}
+h1{font:800 38px/1.1 var(--font-display);letter-spacing:-.04em;}
+h2{font:700 26px/1.2 var(--font-display);letter-spacing:-.03em;}
+h3{font:700 18px/1.2 var(--font-display);letter-spacing:-.02em;}
+p{font:500 15px/1.5 var(--font-body);color:var(--dan-ink-3);}
+/* Welcome */
+.hero-emoji{font-size:64px;margin-bottom:16px;display:block;text-align:center;}
+.cat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;width:100%;max-width:580px;margin:20px 0 28px;}
+.cat-btn{padding:14px 18px;border:2px solid var(--dan-line);border-radius:var(--r-lg);background:#fff;cursor:pointer;text-align:left;transition:border-color .2s,background .2s;display:flex;align-items:center;gap:12px;}
+.cat-btn:hover{border-color:var(--dan-violet);background:var(--dan-bg-2);}
+.cat-btn.selected{border-color:var(--dan-violet);background:rgba(141,89,255,.06);}
+.cat-icon{font-size:26px;flex-shrink:0;}
+.cat-label{font:600 14px/1.2 var(--font-display);letter-spacing:-.02em;color:var(--dan-ink);}
+.cat-desc{font:400 12px/1.4 var(--font-body);color:var(--dan-ink-3);margin-top:2px;}
+/* Quiz */
+.quiz-progress{width:100%;height:6px;background:var(--dan-line);border-radius:3px;margin-bottom:24px;overflow:hidden;}
+.quiz-progress-fill{height:100%;background:var(--dan-violet);border-radius:3px;transition:width .4s cubic-bezier(.4,0,.2,1);}
+.question-counter{font:600 13px/1 var(--font-body);color:var(--dan-text-muted);margin-bottom:8px;}
+.question-text{font:700 21px/1.3 var(--font-display);letter-spacing:-.03em;margin-bottom:22px;}
+.options-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.opt-btn{padding:14px 16px;border:2px solid var(--dan-line);border-radius:var(--r-lg);background:#fff;cursor:pointer;font:500 14px/1.4 var(--font-body);text-align:left;color:var(--dan-ink);transition:all .2s;display:flex;align-items:flex-start;gap:10px;}
+.opt-icon{font-size:20px;flex-shrink:0;margin-top:2px;}
+.opt-btn:hover{border-color:var(--dan-violet);background:rgba(141,89,255,.04);}
+.opt-btn.selected{border-color:var(--dan-violet);background:rgba(141,89,255,.08);font-weight:700;}
+.quiz-nav{display:flex;gap:12px;margin-top:24px;justify-content:flex-end;}
+/* Results */
+.result-badge{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;background:rgba(141,89,255,.1);border-radius:var(--r-pill);margin-bottom:16px;}
+.result-badge-icon{font-size:30px;}
+.result-badge-title{font:700 17px/1 var(--font-display);letter-spacing:-.02em;color:var(--dan-violet);}
+.match-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:16px 0 24px;}
+.match-card{padding:18px;border-radius:var(--r-lg);border:1px solid var(--dan-line);background:#fff;box-shadow:var(--shadow-inner);cursor:pointer;transition:transform .2s,box-shadow .2s;}
+.match-card:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(80,81,196,.25);}
+.match-card.top{border-color:var(--dan-violet);border-width:2px;}
+.match-pct{font:800 30px/1 var(--font-display);letter-spacing:-.04em;color:var(--dan-violet);margin-bottom:4px;}
+.match-name{font:700 14px/1.2 var(--font-display);letter-spacing:-.02em;margin-bottom:4px;}
+.match-tag{font:500 12px/1 var(--font-body);color:var(--dan-ink-3);}
+/* Detail */
+.detail-back{display:flex;align-items:center;gap:8px;cursor:pointer;margin-bottom:24px;color:var(--dan-violet);font:600 14px/1 var(--font-display);}
+.detail-back:hover{opacity:.8;}
+.detail-header{display:flex;align-items:flex-start;gap:18px;margin-bottom:24px;}
+.detail-icon-wrap{width:68px;height:68px;border-radius:18px;display:flex;align-items:center;justify-content:center;font-size:34px;flex-shrink:0;}
+.detail-title{font:800 26px/1.1 var(--font-display);letter-spacing:-.04em;margin:8px 0 6px;}
+.detail-tagline{font:500 14px/1.5 var(--font-body);color:var(--dan-ink-3);}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:22px;}
+.info-tile{padding:14px;border-radius:var(--r-lg);text-align:center;}
+.info-tile-val{font:800 20px/1 var(--font-display);letter-spacing:-.04em;margin-bottom:3px;}
+.info-tile-label{font:500 12px/1 var(--font-body);color:var(--dan-ink-3);}
+.section-label{font:700 11px/1 var(--font-display);letter-spacing:.06em;text-transform:uppercase;color:var(--dan-violet);margin-bottom:10px;}
+.skills-wrap{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.skill-pill{padding:5px 12px;border-radius:var(--r-pill);background:var(--dan-bg-2);border:1px solid var(--dan-line);font:500 12px/1 var(--font-body);color:var(--dan-ink-3);}
+.day-list{list-style:none;display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+.day-item{display:flex;gap:12px;align-items:flex-start;padding:10px 14px;background:var(--dan-bg-2);border-radius:var(--r-md);}
+.day-time{font:700 11px/1 var(--font-display);color:var(--dan-violet);width:42px;flex-shrink:0;padding-top:2px;}
+.day-text{font:500 13px/1.4 var(--font-body);color:var(--dan-ink);}
+.tools-wrap{display:flex;flex-wrap:wrap;gap:7px;}
+.tool-chip{display:flex;align-items:center;gap:5px;padding:7px 12px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--dan-line);box-shadow:var(--shadow-inner);font:600 12px/1 var(--font-display);color:var(--dan-ink);}
+.divider{width:100%;height:1px;background:var(--dan-line);margin:18px 0;}
+/* Explorer */
+.explorer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;width:100%;max-width:900px;margin-bottom:24px;}
+.exp-card{padding:18px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--dan-line);box-shadow:var(--shadow-inner);cursor:pointer;transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column;gap:6px;}
+.exp-card:hover{transform:translateY(-3px);box-shadow:0 8px 40px rgba(80,81,196,.25);}
+.exp-icon{font-size:28px;}
+.exp-name{font:700 14px/1.2 var(--font-display);letter-spacing:-.02em;}
+.exp-desc{font:500 11px/1.4 var(--font-body);color:var(--dan-ink-3);}
+.exp-salary{font:700 12px/1 var(--font-display);color:var(--dan-violet);margin-top:4px;}
+.myth-row{display:flex;gap:10px;padding:12px 14px;border-radius:var(--r-md);margin-bottom:7px;align-items:flex-start;}
+.myth-row.myth{background:#FFF3F3;}
+.myth-row.fact{background:#F3FFF8;}
+.myth-badge{font:700 10px/1 var(--font-display);padding:4px 10px;border-radius:var(--r-pill);flex-shrink:0;margin-top:2px;}
+.myth-row.myth .myth-badge{background:#FFD6D6;color:#c00;}
+.myth-row.fact .myth-badge{background:#C3F7D4;color:#006b2e;}
+.myth-text{font:500 13px/1.5 var(--font-body);color:var(--dan-ink);}
+/* Roadmap */
+.roadmap-phases{display:flex;flex-direction:column;gap:0;margin-bottom:24px;position:relative;}
+.roadmap-phases::before{content:'';position:absolute;left:23px;top:24px;bottom:24px;width:2px;background:var(--dan-line);z-index:0;}
+.phase{display:flex;gap:16px;align-items:flex-start;position:relative;z-index:1;}
+.phase+.phase{margin-top:0;}
+.phase-dot-wrap{display:flex;flex-direction:column;align-items:center;flex-shrink:0;}
+.phase-dot{width:48px;height:48px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:20px;border:3px solid #fff;box-shadow:var(--shadow-inner);flex-shrink:0;position:relative;z-index:2;}
+.phase-connector{width:2px;flex:1;min-height:16px;background:var(--dan-line);}
+.phase-body{flex:1;padding:16px 20px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--dan-line);box-shadow:var(--shadow-inner);margin-bottom:12px;}
+.phase-num{font:700 10px/1 var(--font-display);letter-spacing:.08em;text-transform:uppercase;color:var(--dan-violet);margin-bottom:4px;}
+.phase-title{font:700 15px/1.2 var(--font-display);letter-spacing:-.02em;margin-bottom:6px;}
+.phase-duration{display:inline-flex;align-items:center;gap:4px;font:600 11px/1 var(--font-body);color:var(--dan-ink-3);background:var(--dan-bg-2);padding:3px 10px;border-radius:var(--r-pill);margin-bottom:8px;}
+.phase-topics{display:flex;flex-wrap:wrap;gap:6px;}
+.phase-topic{padding:4px 10px;border-radius:var(--r-pill);background:var(--dan-bg-2);border:1px solid var(--dan-line);font:500 12px/1 var(--font-body);color:var(--dan-ink-3);}
+.phase-topic.highlight{background:var(--dan-violet-soft);border-color:transparent;color:var(--dan-navy);font-weight:600;}
+/* Portfolio examples */
+.pf-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
+.pf-tab{padding:8px 16px;border-radius:var(--r-pill);border:2px solid var(--dan-line);background:#fff;font:600 13px/1 var(--font-display);color:var(--dan-ink-3);cursor:pointer;transition:all .2s;}
+.pf-tab.active{background:var(--dan-ink);color:#fff;border-color:var(--dan-ink);}
+.pf-example{display:none;}
+.pf-example.active{display:block;}
+.pf-label{font:700 11px/1 var(--font-display);letter-spacing:.06em;text-transform:uppercase;color:var(--dan-violet);margin-bottom:8px;}
+.pf-desc{font:500 13px/1.5 var(--font-body);color:var(--dan-ink-3);margin-bottom:14px;}
+.pf-artifact{border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--dan-line);box-shadow:var(--shadow-inner);}
+/* ── Responsive ── */
+@media(max-width:600px){
+  .screen{padding:20px 14px 40px;}
+  .card{padding:20px;}
+  h1{font-size:24px;}
+  h2{font-size:20px;}
+  h3{font-size:16px;}
+
+  /* Welcome */
+  .cat-grid{grid-template-columns:1fr;}
+
+  /* Quiz */
+  .options-grid{grid-template-columns:1fr;}
+
+  /* Results */
+  .match-cards{grid-template-columns:1fr 1fr;}
+  .match-pct{font-size:22px;}
+
+  /* Detail */
+  .detail-header{flex-direction:column;gap:12px;}
+  .info-grid{grid-template-columns:1fr 1fr;}
+  .info-tile-val{font-size:15px;}
+
+  /* Explorer */
+  .explorer-grid{grid-template-columns:1fr 1fr;}
+
+  /* Roadmap */
+  .roadmap-phases::before{left:19px;}
+  .phase-dot{width:36px;height:36px;font-size:15px;}
+  .phase-body{padding:12px 14px;}
+
+  /* Portfolio */
+  .pf-tabs{gap:4px;}
+  .pf-tab{padding:6px 12px;font-size:12px;}
+
+  /* Buttons */
+  .btn{height:46px;padding:0 20px;font-size:14px;}
+  .logo-bar{flex-wrap:wrap;gap:8px;}
+
+  /* SVG artifacts — allow horizontal scroll on small screens */
+  .pf-artifact{overflow-x:auto;}
+  .pf-artifact svg{min-width:360px;}
+}
+</style>
+</head>
+<body>
+
+<!-- SCREEN 1: WELCOME -->
+<div class="screen active" id="s-welcome">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <span class="eyebrow">IT профорієнтація</span>
+  </div>
+  <div class="card" style="text-align:center;align-items:center;display:flex;flex-direction:column;">
+    <span class="hero-emoji">🚀</span>
+    <div class="eyebrow" style="margin-bottom:12px;">Інтерактивний гід</div>
+    <h1 style="margin-bottom:14px;">Яка IT&#8209;професія<br/>підходить саме тобі?</h1>
+    <p style="max-width:500px;margin-bottom:24px;">Пройди короткий квіз, дізнайся свій IT&#8209;тип і досліди 12 справжніх кар'єрних шляхів у технологіях.</p>
+    <p style="font:600 14px/1.2 var(--font-display);color:var(--dan-ink);margin-bottom:12px;">Що тобі найближче? (обери одне або кілька)</p>
+    <div class="cat-grid" id="interest-grid">
+      <button class="cat-btn" data-cat="build" onclick="toggleCat(this)">
+        <span class="cat-icon">🔨</span>
+        <div><div class="cat-label">Люблю будувати</div><div class="cat-desc">Програми, сайти, системи</div></div>
+      </button>
+      <button class="cat-btn" data-cat="design" onclick="toggleCat(this)">
+        <span class="cat-icon">🎨</span>
+        <div><div class="cat-label">Люблю дизайн</div><div class="cat-desc">Краса, зручність, колір</div></div>
+      </button>
+      <button class="cat-btn" data-cat="data" onclick="toggleCat(this)">
+        <span class="cat-icon">📊</span>
+        <div><div class="cat-label">Люблю числа</div><div class="cat-desc">Аналіз, дані, закономірності</div></div>
+      </button>
+      <button class="cat-btn" data-cat="people" onclick="toggleCat(this)">
+        <span class="cat-icon">🤝</span>
+        <div><div class="cat-label">Люблю спілкуватися</div><div class="cat-desc">Команди, проекти, люди</div></div>
+      </button>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <button class="btn btn-primary" onclick="goQuiz()">Пройти квіз — знайти мій IT&#8209;тип</button>
+      <button class="btn btn-ghost" onclick="goExplorer()">Дослідити всі професії</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN 2: QUIZ -->
+<div class="screen" id="s-quiz">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <div class="progress-bar" id="prog-dots"></div>
+  </div>
+  <div class="card">
+    <div class="quiz-progress"><div class="quiz-progress-fill" id="qprogfill"></div></div>
+    <div class="question-counter" id="q-counter"></div>
+    <div class="question-text" id="q-text"></div>
+    <div class="options-grid" id="q-options"></div>
+    <div class="quiz-nav">
+      <button class="btn btn-ghost" id="q-back" onclick="quizBack()" style="display:none;">&#8592; Назад</button>
+      <button class="btn btn-primary" id="q-next" onclick="quizNext()" disabled>Далі &#8594;</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN 3: RESULTS -->
+<div class="screen" id="s-results">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <button class="btn btn-ghost" onclick="goExplorer()" style="height:40px;font-size:13px;">Усі професії</button>
+  </div>
+  <div class="card">
+    <div style="text-align:center;margin-bottom:28px;">
+      <div class="eyebrow" style="margin-bottom:10px;">Твій результат</div>
+      <div class="result-badge" id="result-badge">
+        <span class="result-badge-icon" id="r-icon">💻</span>
+        <span class="result-badge-title" id="r-type">Frontend Developer</span>
+      </div>
+      <p id="r-desc" style="max-width:500px;margin:12px auto 0;"></p>
+    </div>
+    <h3 style="margin-bottom:14px;">Твої топ&#8209;збіги</h3>
+    <div class="match-cards" id="match-cards"></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:6px;">
+      <button class="btn btn-primary" id="r-explore-btn">Дослідити мою професію &#8594;</button>
+      <button class="btn btn-ghost" onclick="restartQuiz()">Пройти ще раз</button>
+    </div>
+  </div>
+</div>
+
+<!-- SCREEN 4: DETAIL -->
+<div class="screen" id="s-detail">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <button class="btn btn-ghost" onclick="goExplorer()" style="height:40px;font-size:13px;">Усі професії</button>
+  </div>
+  <div class="card" id="detail-content"></div>
+</div>
+
+<!-- SCREEN 5: EXPLORER -->
+<div class="screen" id="s-explorer">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <button class="btn btn-ghost" onclick="showScreen('s-welcome')" style="height:40px;font-size:13px;">&#8592; На початок</button>
+  </div>
+  <div style="width:100%;max-width:900px;margin-bottom:20px;text-align:center;">
+    <div class="eyebrow" style="margin-bottom:10px;">Усі напрямки</div>
+    <h2>Обирай свою IT&#8209;професію</h2>
+    <p style="margin-top:8px;">Клікай на будь-яку — дізнайся, чим займаються, скільки заробляють та які інструменти використовують.</p>
+  </div>
+  <div class="explorer-grid" id="explorer-grid"></div>
+  <div class="card" style="width:100%;max-width:900px;">
+    <div class="eyebrow" style="margin-bottom:12px;">Міф або факт?</div>
+    <h3 style="margin-bottom:14px;">Правда про IT</h3>
+    <div class="myth-row myth"><span class="myth-badge">МІФ</span><span class="myth-text">«Треба бути генієм математики, щоб іти в IT» — насправді більшість IT-ролей майже не вимагають складної математики.</span></div>
+    <div class="myth-row fact"><span class="myth-badge">ФАКТ</span><span class="myth-text">Новачки без досвіду реально отримують роботу за 6–12 місяців цілеспрямованого навчання.</span></div>
+    <div class="myth-row myth"><span class="myth-badge">МІФ</span><span class="myth-text">«IT — тільки для інтровертів» — Product Manager, HR, BA та PM постійно спілкуються з людьми.</span></div>
+    <div class="myth-row fact"><span class="myth-badge">ФАКТ</span><span class="myth-text">В IT є ролі для аналітиків, дизайнерів, комунікаторів і технарів — кожен знайде своє.</span></div>
+    <div class="myth-row myth"><span class="myth-badge">МІФ</span><span class="myth-text">«Потрібно знати все одразу» — насправді спеціалізація цінується більше, ніж поверхнє знання всього.</span></div>
+    <div class="myth-row fact"><span class="myth-badge">ФАКТ</span><span class="myth-text">Середня зарплата Junior в IT вже після 1 року вища за більшість інших галузей для молоді.</span></div>
+  </div>
+</div>
+
+<!-- SCREEN 6: PORTFOLIO EXAMPLES -->
+<div class="screen" id="s-portfolio">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <button class="btn btn-ghost" id="pf-back-btn" style="height:40px;font-size:13px;">&#8592; Назад</button>
+  </div>
+  <div class="card" id="portfolio-content"></div>
+</div>
+
+<!-- SCREEN 7: ROADMAP -->
+<div class="screen" id="s-roadmap">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <button class="btn btn-ghost" id="rm-back-btn" style="height:40px;font-size:13px;">&#8592; Назад</button>
+  </div>
+  <div class="card" id="roadmap-content"></div>
+</div>
+
+<!-- SCREEN 8: LEAD CAPTURE -->
+<div class="screen" id="s-lead">
+  <div class="logo-bar">
+    <div class="logo">DAN<span>.</span>IT</div>
+    <button class="btn btn-ghost" id="lead-back-btn" onclick="showScreen('s-roadmap')" style="height:40px;font-size:13px;">&#8592; Назад</button>
+  </div>
+  <div class="card" style="max-width:560px;">
+    <div style="text-align:center;margin-bottom:24px;">
+      <span class="hero-emoji" style="font-size:44px;">&#127891;</span>
+      <div class="eyebrow" style="margin-bottom:10px;">Наступний крок</div>
+      <h2 style="margin-bottom:10px;">Залиш контакт — ми допоможемо почати</h2>
+      <p id="lead-subtitle" style="max-width:420px;margin:0 auto;">Отримай безкоштовну консультацію: розкажемо про курс, формат і як записатися.</p>
+    </div>
+    <!-- HubSpot form renders here (EU region) -->
+    <div class="hs-form-frame" data-region="eu1"
+         data-form-id="e73e168b-0347-438c-9ebe-2272da95de2c"
+         data-portal-id="148955052"></div>
+  </div>
+</div>
+
+<script>
+const PROFESSIONS = [
+  {id:'frontend',icon:'🖥️',color:'#E2C6FF',colorBg:'rgba(226,198,255,.12)',name:'Frontend Developer',tag:'Розробка',salary:'$800–2500/міс',
+   tagline:'Ти створюєш те, що бачать і торкаються мільйони людей — кнопки, анімації, цілі сайти.',
+   desc:'Frontend-розробник пише код для браузера: HTML, CSS, JavaScript. Відповідає за зовнішній вигляд і поведінку сайтів та додатків.',
+   skills:['HTML / CSS','JavaScript','React або Vue','Git','Figma (читати макети)','Responsive Design','Тестування в браузері'],
+   tools:['VS Code','Chrome DevTools','Figma','GitHub','React / Vue','npm'],
+   day:[{t:'09:00',a:'Переглядаєш Figma-макет нового компонента'},{t:'10:00',a:'Кодиш кнопки та форми'},{t:'12:00',a:'Демо з дизайнером — обговорюєш відступи'},{t:'14:00',a:'Фіксиш баги після QA-команди'},{t:'16:00',a:'Code review у команді'},{t:'17:00',a:'Вивчаєш новий фреймворк або документацію'}],
+   scores:{build:4,design:3,data:1,people:1}},
+  {id:'backend',icon:'⚙️',color:'#DCFEBC',colorBg:'rgba(220,254,188,.12)',name:'Backend Developer',tag:'Розробка',salary:'$1000–3000/міс',
+   tagline:'Ти будуєш «двигун» під капотом — бази даних, API, серверну логіку.',
+   desc:'Backend-розробник відповідає за все, що відбувається на сервері: зберігання даних, обробка запитів, безпека та швидкодія.',
+   skills:['Python / Node.js / Java','Бази даних (SQL)','REST API','Docker','Git','Алгоритми та структури даних'],
+   tools:['VS Code','PostgreSQL','Docker','GitHub','Postman','Linux Terminal'],
+   day:[{t:'09:00',a:'Планування задач у Jira'},{t:'10:00',a:'Розробка нового API-ендпоінту'},{t:'12:00',a:'Синк із frontend-командою'},{t:'14:00',a:'Оптимізація повільних SQL-запитів'},{t:'16:00',a:'Code review та деплой'},{t:'17:00',a:'Читаєш про нові архітектурні патерни'}],
+   scores:{build:5,design:1,data:3,people:1}},
+  {id:'uiux',icon:'🎨',color:'#BBECFF',colorBg:'rgba(187,236,255,.12)',name:'UI/UX Designer',tag:'Дизайн',salary:'$700–2000/міс',
+   tagline:'Ти вирішуєш, як виглядає і наскільки зручний кожен продукт для людей.',
+   desc:'UX-дизайнер досліджує потреби користувачів та проєктує зручні інтерфейси. UI-дизайнер відповідає за візуальну красу продукту.',
+   skills:['Figma','Прототипування','UX Research','Wireframing','Теорія кольору','Типографіка','User Testing'],
+   tools:['Figma','Miro','Notion','Maze','Hotjar','Google Forms'],
+   day:[{t:'09:00',a:'Аналіз відгуків користувачів'},{t:'10:00',a:'Малюєш wireframes нового екрану'},{t:'12:00',a:'Юзер-тестування з 3 учасниками'},{t:'14:00',a:'Будуєш прототип у Figma'},{t:'16:00',a:'Презентація дизайну команді'},{t:'17:00',a:'Оновлюєш дизайн-систему'}],
+   scores:{build:2,design:5,data:2,people:3}},
+  {id:'marketing',icon:'📣',color:'#FCF050',colorBg:'rgba(252,240,80,.12)',name:'Marketing Designer',tag:'Дизайн',salary:'$600–1800/міс',
+   tagline:'Ти створюєш банери, рекламу, SMM-контент — все, що змушує людей зупинитися і подивитися.',
+   desc:'Marketing Designer поєднує дизайн і маркетинг: робить рекламні матеріали, обкладинки, email-розсилки та пости для соцмереж.',
+   skills:['Figma / Adobe','Моушн-дизайн основи','Копірайтинг','Брендинг','Photoshop / Illustrator','Аналіз рекламних метрик'],
+   tools:['Figma','Adobe Photoshop','Canva','After Effects','Meta Ads Manager'],
+   day:[{t:'09:00',a:'Бриф від маркетолога — нова кампанія'},{t:'10:00',a:'Малюєш 3 варіанти банеру'},{t:'12:00',a:'Узгоджуєш з клієнтом або командою'},{t:'14:00',a:'Готуєш пости для Instagram та Facebook'},{t:'16:00',a:'Аналізуєш CTR попередніх банерів'},{t:'17:00',a:'Вивчаєш нові тренди у дизайні реклами'}],
+   scores:{build:1,design:5,data:2,people:3}},
+  {id:'devops',icon:'🛠️',color:'#E2C6FF',colorBg:'rgba(226,198,255,.12)',name:'DevOps Engineer',tag:'Інфраструктура',salary:'$1200–3500/міс',
+   tagline:'Ти — міст між розробкою та серверами. Все запускається, не падає і деплоїться автоматично.',
+   desc:'DevOps інженер автоматизує процеси розробки та підтримки: налаштовує сервери, CI/CD пайплайни та моніторинг.',
+   skills:['Linux','Docker / Kubernetes','CI/CD (GitHub Actions)','Cloud (AWS/GCP)','Bash scripting','Моніторинг (Prometheus)'],
+   tools:['Docker','Kubernetes','GitHub Actions','AWS','Terraform','Grafana'],
+   day:[{t:'09:00',a:'Перевіряєш дашборд моніторингу'},{t:'10:00',a:'Налаштовуєш CI/CD для нового сервісу'},{t:'12:00',a:'Розслідуєш інцидент — сервер повільний'},{t:'14:00',a:'Онбординг нового девелопера'},{t:'16:00',a:'Оновлюєш Kubernetes конфіги'},{t:'17:00',a:'Документуєш інфраструктуру'}],
+   scores:{build:4,design:1,data:4,people:2}},
+  {id:'qa-manual',icon:'🔍',color:'#DCFEBC',colorBg:'rgba(220,254,188,.12)',name:'QA Manual Engineer',tag:'Якість',salary:'$600–1800/міс',
+   tagline:'Ти — детектив продукту. Знаходиш баги перш ніж їх побачать користувачі.',
+   desc:'QA Manual тестує програми вручну: пише тест-кейси, шукає баги, перевіряє, що всі функції працюють як задумано.',
+   skills:['Тест-кейси','Bug reporting','Jira / Trello','Postman (API тести)','SQL основи','Розуміння SDLC'],
+   tools:['Jira','Postman','Chrome DevTools','TestRail','Confluence','SQL Client'],
+   day:[{t:'09:00',a:'Читаєш нові вимоги (requirements)'},{t:'10:00',a:'Пишеш тест-кейси для нової фічі'},{t:'12:00',a:'Ручне тестування нового релізу'},{t:'14:00',a:'Заводиш баги у Jira з деталями та скринами'},{t:'16:00',a:'Регресійне тестування старих фіч'},{t:'17:00',a:'Обговорення знайдених проблем з розробниками'}],
+   scores:{build:3,design:1,data:3,people:3}},
+  {id:'qa-auto',icon:'🤖',color:'#BBECFF',colorBg:'rgba(187,236,255,.12)',name:'QA Automation Engineer',tag:'Якість',salary:'$1000–2800/міс',
+   tagline:'Ти пишеш роботів, які тестують замість людей — сотні перевірок за хвилини.',
+   desc:'QA Automation пише автотести на Python / JavaScript, інтегрує їх у CI/CD та зменшує ручну роботу команди.',
+   skills:['Python або JavaScript','Selenium / Playwright','API тестування','Git','Pytest / Jest','CI/CD інтеграція'],
+   tools:['Python','Playwright','GitHub Actions','Docker','Pytest','Allure Report'],
+   day:[{t:'09:00',a:'Code review автотестів колеги'},{t:'10:00',a:'Пишеш нові e2e тести для checkout'},{t:'12:00',a:'Налаштовуєш запуск тестів у GitHub Actions'},{t:'14:00',a:'Аналіз упалих тестів після деплою'},{t:'16:00',a:'Рефакторинг старих тестів'},{t:'17:00',a:'Вивчаєш новий фреймворк для мобільного тестування'}],
+   scores:{build:4,design:1,data:4,people:1}},
+  {id:'pm',icon:'🗂️',color:'#FCF050',colorBg:'rgba(252,240,80,.12)',name:'Product Manager',tag:'Управління',salary:'$1200–4000/міс',
+   tagline:'Ти вирішуєш ЩО будує команда — збираєш ідеї, пріоритизуєш і перетворюєш їх на продукт.',
+   desc:'Product Manager відповідає за стратегію продукту: аналізує ринок, спілкується з користувачами та координує команду розробки.',
+   skills:['Product strategy','User research','Data analysis','Roadmapping','Stakeholder communication','A/B тестування'],
+   tools:['Notion','Jira','Miro','Google Analytics','Figma','Amplitude'],
+   day:[{t:'09:00',a:'Аналіз метрик продукту за вчора'},{t:'10:00',a:'Інтерв\'ю з 2 користувачами'},{t:'12:00',a:'Sprint planning з командою розробки'},{t:'14:00',a:'Презентація roadmap стейкхолдерам'},{t:'16:00',a:'Пріоритизація беклогу'},{t:'17:00',a:'Аналіз конкурентів, читаєш Product Hunt'}],
+   scores:{build:1,design:2,data:4,people:5}},
+  {id:'projmgr',icon:'📋',color:'#E2C6FF',colorBg:'rgba(226,198,255,.12)',name:'Project Manager',tag:'Управління',salary:'$1000–3000/міс',
+   tagline:'Ти забезпечуєш, що команда вкладається в дедлайни, бюджет і не розривається від задач.',
+   desc:'Project Manager планує і контролює виконання IT-проєктів: розподіляє задачі, слідкує за ризиками, звітує замовнику.',
+   skills:['Agile / Scrum','Управління ризиками','Комунікація','Jira / Asana','Бюджетування','Нотації управління проєктами'],
+   tools:['Jira','Confluence','MS Teams','Slack','Notion','Google Workspace'],
+   day:[{t:'09:00',a:'Daily standup з командою (15 хв)'},{t:'10:00',a:'Оновлення статусу проєкту для клієнта'},{t:'12:00',a:'Вирішення блокера між frontend і backend'},{t:'14:00',a:'Ретроспектива спринту'},{t:'16:00',a:'Планування наступного спринту'},{t:'17:00',a:'Звіт стейкхолдерам'}],
+   scores:{build:1,design:1,data:3,people:5}},
+  {id:'ba',icon:'📈',color:'#DCFEBC',colorBg:'rgba(220,254,188,.12)',name:'Business Analyst',tag:'Аналітика',salary:'$900–2500/міс',
+   tagline:'Ти перекладаєш мову бізнесу на мову IT і навпаки — щоб система вирішувала справжні проблеми.',
+   desc:'Business Analyst збирає вимоги бізнесу, аналізує процеси та описує, що саме має зробити IT-система.',
+   skills:['Requirements gathering','BPMN / UML','SQL основи','User stories','Excel / Google Sheets','Stakeholder interviews'],
+   tools:['Confluence','Jira','Miro','Lucidchart','Excel','Notion'],
+   day:[{t:'09:00',a:'Воркшоп із замовником — збір вимог'},{t:'10:00',a:'Описуєш User Stories у Confluence'},{t:'12:00',a:'Погодження вимог із розробниками'},{t:'14:00',a:'Малюєш схему бізнес-процесу (BPMN)'},{t:'16:00',a:'Аналіз поточної системи — знаходиш вузькі місця'},{t:'17:00',a:'Готуєш специфікацію для нової функції'}],
+   scores:{build:1,design:2,data:4,people:4}},
+  {id:'data-analyst',icon:'📊',color:'#BBECFF',colorBg:'rgba(187,236,255,.12)',name:'Data Analyst',tag:'Дані',salary:'$900–2800/міс',
+   tagline:'Ти перетворюєш хаос із цифр на зрозумілі висновки, що допомагають приймати рішення.',
+   desc:'Data Analyst збирає, очищає та аналізує дані, будує дашборди та допомагає компанії зрозуміти, що відбувається.',
+   skills:['SQL','Python (pandas)','Excel / Google Sheets','Tableau / Power BI','Статистика основи','Data visualization'],
+   tools:['SQL','Python','Tableau','Google Looker','Excel','Jupyter Notebook'],
+   day:[{t:'09:00',a:'Витягуєш дані з бази SQL-запитом'},{t:'10:00',a:'Чистиш датасет у pandas'},{t:'12:00',a:'Будуєш дашборд у Tableau'},{t:'14:00',a:'Презентація інсайтів маркетинговій команді'},{t:'16:00',a:'Аналіз ефективності нової рекламної кампанії'},{t:'17:00',a:'Вивчаєш нові Python-бібліотеки'}],
+   scores:{build:2,design:2,data:5,people:2}},
+  {id:'data-scientist',icon:'🧠',color:'#E2C6FF',colorBg:'rgba(226,198,255,.12)',name:'Data Scientist',tag:'Дані',salary:'$1500–5000/міс',
+   tagline:'Ти навчаєш комп\'ютери вчитися — будуєш моделі, що прогнозують, розпізнають і рекомендують.',
+   desc:'Data Scientist розробляє ML-моделі: прогнозує відтік клієнтів, рекомендує контент, розпізнає зображення.',
+   skills:['Python','Machine Learning','Statistics','Deep Learning основи','Feature Engineering','SQL','Data viz'],
+   tools:['Python','TensorFlow / PyTorch','Jupyter','scikit-learn','Kaggle','Docker'],
+   day:[{t:'09:00',a:'Досліджуєш датасет (EDA)'},{t:'10:00',a:'Тренуєш нову модель прогнозування'},{t:'12:00',a:'Аналіз метрик моделі (accuracy, F1)'},{t:'14:00',a:'Синк із product командою — пояснюєш результат'},{t:'16:00',a:'Feature engineering та налаштування гіперпараметрів'},{t:'17:00',a:'Читаєш нові ML-статті на arxiv'}],
+   scores:{build:3,design:1,data:5,people:1}},
+  {id:'hr',icon:'🤝',color:'#FCF050',colorBg:'rgba(252,240,80,.12)',name:'IT HR / Recruiter',tag:'Люди',salary:'$700–2000/міс',
+   tagline:'Ти знаходиш найкращих людей для IT-команд і допомагаєш їм рости в компанії.',
+   desc:'IT HR рекрутить розробників, дизайнерів та менеджерів, веде адаптацію, корпоративну культуру та розвиток команди.',
+   skills:['Інтерв\'ювання','LinkedIn Recruiting','HR аналітика','Onboarding','Employer branding','Розуміння IT-профілів'],
+   tools:['LinkedIn Recruiter','Greenhouse','Notion','Slack','Google Workspace','HiBob'],
+   day:[{t:'09:00',a:'Переглядаєш нові заявки на вакансії'},{t:'10:00',a:'3 інтерв\'ю з кандидатами'},{t:'12:00',a:'Синк із hiring manager — feedback по кандидатах'},{t:'14:00',a:'Онбординг нового співробітника'},{t:'16:00',a:'Пишеш опис вакансії для senior developer'},{t:'17:00',a:'Аналіз HR-метрик: time to hire, retention'}],
+   scores:{build:0,design:1,data:2,people:5}}
+];
+
+const QUESTIONS = [
+  {text:'Як ти проводиш вільний час?',opts:[
+    {icon:'🎮',text:'Граю у відеоігри або розбираю, як вони зроблені',cats:{build:3,data:1}},
+    {icon:'✏️',text:'Малюю, фотографую або займаюсь творчістю',cats:{design:3,people:1}},
+    {icon:'🧩',text:'Розгадую задачі, логічні ігри чи пазли',cats:{data:3,build:1}},
+    {icon:'💬',text:'Спілкуюсь з друзями, організовую зустрічі',cats:{people:3,design:1}},
+  ]},
+  {text:'Який шкільний предмет тобі найближчий?',opts:[
+    {icon:'💻',text:'Інформатика — люблю код та алгоритми',cats:{build:4}},
+    {icon:'🎨',text:'Образотворче мистецтво або технологія',cats:{design:4}},
+    {icon:'📐',text:'Математика та фізика',cats:{data:4,build:1}},
+    {icon:'📖',text:'Мова та комунікація',cats:{people:4}},
+  ]},
+  {text:'Ти отримав/ла завдання зробити шкільний проект. Що ти робиш?',opts:[
+    {icon:'🛠️',text:'Одразу починаю будувати — сайт, презентацію, додаток',cats:{build:3,design:1}},
+    {icon:'🎭',text:'Думаю, як зробити це красиво і привабливо',cats:{design:3,people:1}},
+    {icon:'📊',text:'Збираю дані, аналізую і роблю висновки',cats:{data:3}},
+    {icon:'👥',text:'Організовую команду й розподіляю ролі',cats:{people:3}},
+  ]},
+  {text:'Що тебе найбільше дратує?',opts:[
+    {icon:'😤',text:'Коли щось не працює і я не розумію чому',cats:{build:2,data:2}},
+    {icon:'😩',text:'Коли дизайн або інтерфейс незручний і некрасивий',cats:{design:3}},
+    {icon:'🤯',text:'Коли є купа даних, але ніхто їх не аналізує',cats:{data:3}},
+    {icon:'😫',text:'Коли люди не домовляються і все хаотично',cats:{people:3}},
+  ]},
+  {text:'Як ти більше любиш вчитися?',opts:[
+    {icon:'⌨️',text:'Одразу пробую — пишу код, роблю проект',cats:{build:3,data:1}},
+    {icon:'🖼️',text:'Дивлюсь відео, вивчаю приклади і повторюю',cats:{design:2,people:1}},
+    {icon:'📚',text:'Читаю, роблю нотатки, вивчаю теорію глибоко',cats:{data:3}},
+    {icon:'🗣️',text:'Обговорюю з іншими, задаю запитання',cats:{people:3}},
+  ]},
+  {text:'Уяви: ти в IT-компанії. Що тобі цікавіше зробити?',opts:[
+    {icon:'💡',text:'Написати нову фічу для сайту або програми',cats:{build:4}},
+    {icon:'✨',text:'Перемалювати інтерфейс і зробити його зручнішим',cats:{design:4}},
+    {icon:'🔢',text:'Проаналізувати дані та знайти причину проблеми',cats:{data:4}},
+    {icon:'🤝',text:'Провести зустріч і скоординувати команду',cats:{people:4}},
+  ]},
+];
+
+let currentQ=0, answers=[], selectedCats=[], fromResults=false;
+let resultProfession=null; // winning profession, used by the HubSpot lead form
+
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function toggleCat(btn){
+  btn.classList.toggle('selected');
+  selectedCats=[...document.querySelectorAll('.cat-btn.selected')].map(b=>b.dataset.cat);
+}
+
+function goQuiz(){currentQ=0;answers=[];renderQuestion();showScreen('s-quiz');}
+
+function renderQuestion(){
+  const q=QUESTIONS[currentQ], total=QUESTIONS.length;
+  document.getElementById('q-counter').textContent=`Питання ${currentQ+1} з ${total}`;
+  document.getElementById('q-text').textContent=q.text;
+  document.getElementById('qprogfill').style.width=`${(currentQ/total)*100}%`;
+  const dots=document.getElementById('prog-dots');
+  dots.innerHTML=QUESTIONS.map((_,i)=>`<div class="prog-dot ${i<currentQ?'done':i===currentQ?'active':''}"></div>`).join('');
+  const opts=document.getElementById('q-options');
+  opts.innerHTML=q.opts.map((o,i)=>`<button class="opt-btn ${answers[currentQ]===i?'selected':''}" onclick="selectOpt(${i})"><span class="opt-icon">${o.icon}</span><span>${o.text}</span></button>`).join('');
+  document.getElementById('q-back').style.display=currentQ>0?'':'none';
+  const nb=document.getElementById('q-next');
+  nb.disabled=answers[currentQ]===undefined;
+  nb.textContent=currentQ===total-1?'Показати результат 🎉':'Далі →';
+}
+
+function selectOpt(idx){
+  answers[currentQ]=idx;
+  document.querySelectorAll('.opt-btn').forEach((b,i)=>b.classList.toggle('selected',i===idx));
+  document.getElementById('q-next').disabled=false;
+}
+
+function quizNext(){
+  if(answers[currentQ]===undefined) return;
+  if(currentQ<QUESTIONS.length-1){currentQ++;renderQuestion();}
+  else{calcResults();}
+}
+
+function quizBack(){if(currentQ>0){currentQ--;renderQuestion();}}
+function restartQuiz(){goQuiz();}
+
+function calcResults(){
+  const sc={build:0,design:0,data:0,people:0};
+  answers.forEach((a,qi)=>{
+    const cats=QUESTIONS[qi].opts[a].cats;
+    Object.entries(cats).forEach(([k,v])=>sc[k]+=v);
+  });
+  selectedCats.forEach(c=>sc[c]+=2);
+  const ranked=PROFESSIONS.map(p=>{
+    let s=0;
+    Object.entries(p.scores).forEach(([k,v])=>s+=sc[k]*v);
+    return {prof:p,score:s};
+  }).sort((a,b)=>b.score-a.score);
+  const top=ranked[0].prof, maxS=ranked[0].score;
+  resultProfession=top; // remember result for the lead form
+  document.getElementById('r-icon').textContent=top.icon;
+  document.getElementById('r-type').textContent=top.name;
+  document.getElementById('r-desc').textContent=top.desc;
+  document.getElementById('result-badge').style.background=top.colorBg;
+  document.getElementById('match-cards').innerHTML=ranked.slice(0,3).map((ps,i)=>{
+    const pct=Math.round((ps.score/maxS)*100);
+    return `<div class="match-card ${i===0?'top':''}" onclick="showDetail('${ps.prof.id}',true)" style="background:${ps.prof.colorBg}${i===0?`;border-color:var(--dan-violet);border-width:2px`:''}">
+      <div style="font-size:26px;margin-bottom:6px;">${ps.prof.icon}</div>
+      <div class="match-pct" style="color:${i===0?'var(--dan-violet)':'var(--dan-ink-3)'}">${pct}%</div>
+      <div class="match-name">${ps.prof.name}</div>
+      <div class="match-tag">${ps.prof.tag}</div>
+    </div>`;
+  }).join('');
+  document.getElementById('r-explore-btn').onclick=()=>showDetail(top.id,true);
+  showScreen('s-results');
+}
+
+function showDetail(id,fromRes){
+  const p=PROFESSIONS.find(x=>x.id===id);
+  fromResults=fromRes;
+  document.getElementById('detail-content').innerHTML=`
+    <div class="detail-back" onclick="${fromRes?'showScreen(\'s-results\')':'showScreen(\'s-explorer\')'}" >&#8592; ${fromRes?'Назад до результатів':'Назад до всіх професій'}</div>
+    <div class="detail-header">
+      <div class="detail-icon-wrap" style="background:${p.colorBg};">${p.icon}</div>
+      <div style="flex:1">
+        <span class="pill" style="background:${p.color};margin-bottom:8px;">${p.tag}</span>
+        <div class="detail-title">${p.name}</div>
+        <p class="detail-tagline">${p.tagline}</p>
+      </div>
+    </div>
+    <div class="info-grid">
+      <div class="info-tile" style="background:${p.colorBg}"><div class="info-tile-val">${p.salary}</div><div class="info-tile-label">Зарплата junior</div></div>
+      <div class="info-tile" style="background:var(--dan-bg-2)"><div class="info-tile-val">6–12 міс</div><div class="info-tile-label">Щоб почати</div></div>
+      <div class="info-tile" style="background:var(--dan-bg-2)"><div class="info-tile-val">Висока</div><div class="info-tile-label">Затребуваність</div></div>
+    </div>
+    <div class="section-label">Що ти будеш робити щодня</div>
+    <ul class="day-list">${p.day.map(d=>`<li class="day-item"><span class="day-time">${d.t}</span><span class="day-text">${d.a}</span></li>`).join('')}</ul>
+    <div class="section-label">Які навички потрібні</div>
+    <div class="skills-wrap">${p.skills.map(s=>`<span class="skill-pill">${s}</span>`).join('')}</div>
+    <div class="section-label">Інструменти</div>
+    <div class="tools-wrap">${p.tools.map(t=>`<span class="tool-chip">&#9889; ${t}</span>`).join('')}</div>
+    <div class="divider"></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <button class="btn btn-primary" onclick="showPortfolio('${p.id}',${fromRes})">Хочу навчатися цьому 🚀</button>
+      <button class="btn btn-ghost" onclick="${fromRes?'showScreen(\'s-results\')':'showScreen(\'s-explorer\')'}" >&#8592; Назад</button>
+    </div>`;
+  showScreen('s-detail');
+}
+
+/* ── PORTFOLIO EXAMPLES ── */
+const PORTFOLIO_EXAMPLES = {
+  frontend:[
+    {tab:'Картка товару',desc:'Компонент картки товару для інтернет-магазину — те, що junior frontend робить на першому тижні роботи.',
+     svg:`<svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="20" y="16" width="480" height="288" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <rect x="36" y="32" width="180" height="180" rx="12" fill="#E2C6FF"/>
+  <text x="126" y="128" text-anchor="middle" font-size="48" fill="#8D59FF">👟</text>
+  <rect x="36" y="224" width="60" height="20" rx="10" fill="#DCFEBC"/>
+  <text x="66" y="238" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#1A1A40">NEW</text>
+  <rect x="104" y="224" width="60" height="20" rx="10" fill="#FCF050"/>
+  <text x="134" y="238" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#1A1A40">SALE</text>
+  <text x="236" y="60" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Adidas / Кросівки</text>
+  <text x="236" y="86" font-family="Manrope,sans-serif" font-size="18" font-weight="800" fill="#212121">Ultraboost 22</text>
+  <text x="236" y="106" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Чоловічі бігові кросівки</text>
+  <text x="236" y="140" font-family="Manrope,sans-serif" font-size="24" font-weight="800" fill="#8D59FF">₴4 299</text>
+  <text x="310" y="140" font-family="Manrope,sans-serif" font-size="14" fill="#B3B3BF" text-decoration="line-through">₴5 999</text>
+  <text x="236" y="165" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Розмір:</text>
+  <rect x="236" y="174" width="32" height="24" rx="8" fill="#212121"/>
+  <text x="252" y="190" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="white">40</text>
+  <rect x="274" y="174" width="32" height="24" rx="8" fill="#F8F8FB" stroke="#EDEDF9"/>
+  <text x="290" y="190" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">41</text>
+  <rect x="312" y="174" width="32" height="24" rx="8" fill="#F8F8FB" stroke="#EDEDF9"/>
+  <text x="328" y="190" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">42</text>
+  <rect x="350" y="174" width="32" height="24" rx="8" fill="#F8F8FB" stroke="#EDEDF9"/>
+  <text x="366" y="190" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">43</text>
+  <rect x="236" y="212" width="180" height="40" rx="20" fill="#212121"/>
+  <text x="326" y="237" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="700" fill="white">Додати в кошик</text>
+  <text x="236" y="276" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">⭐⭐⭐⭐⭐  4.8 (231 відгук)</text>
+</svg>`},
+    {tab:'Навігація',desc:'Адаптивне меню навігації з логотипом, посиланнями та кнопкою CTA — базовий компонент будь-якого сайту.',
+     svg:`<svg viewBox="0 0 520 80" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:white;">
+  <rect width="520" height="80" fill="white"/>
+  <rect x="0" y="79" width="520" height="1" fill="#EDEDF9"/>
+  <text x="24" y="46" font-family="Manrope,sans-serif" font-size="18" font-weight="800" fill="#212121">DAN<tspan fill="#8D59FF">.</tspan>IT</text>
+  <text x="140" y="46" font-family="Manrope,sans-serif" font-size="13" font-weight="600" fill="#212121">Головна</text>
+  <text x="220" y="46" font-family="Manrope,sans-serif" font-size="13" font-weight="600" fill="#64646B">Про нас</text>
+  <text x="290" y="46" font-family="Manrope,sans-serif" font-size="13" font-weight="600" fill="#64646B">Курси</text>
+  <text x="350" y="46" font-family="Manrope,sans-serif" font-size="13" font-weight="600" fill="#64646B">Блог</text>
+  <rect x="400" y="24" width="100" height="36" rx="18" fill="#212121"/>
+  <text x="450" y="47" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="white">Записатись</text>
+  <rect x="0" y="72" width="140" height="3" rx="2" fill="#8D59FF"/>
+</svg>`},
+  ],
+  backend:[
+    {tab:'API відповідь',desc:'Так виглядає відповідь REST API, яку backend-розробник створює для frontend-команди.',
+     svg:`<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <rect width="520" height="300" fill="#1E1E2E" rx="12"/>
+  <rect x="0" y="0" width="520" height="36" rx="12" fill="#2A2A3E"/>
+  <rect x="0" y="24" width="520" height="12" fill="#2A2A3E"/>
+  <circle cx="20" cy="18" r="6" fill="#FF5F57"/><circle cx="40" cy="18" r="6" fill="#FFBD2E"/><circle cx="60" cy="18" r="6" fill="#28C840"/>
+  <text x="220" y="23" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#888">GET /api/users/42</text>
+  <text x="24" y="60" font-family="monospace" font-size="12" fill="#7C8CF8">200 OK</text>
+  <text x="90" y="60" font-family="monospace" font-size="12" fill="#555">·</text>
+  <text x="100" y="60" font-family="monospace" font-size="12" fill="#888">124ms</text>
+  <text x="24" y="84" font-family="monospace" font-size="12" fill="#888">{</text>
+  <text x="44" y="104" font-family="monospace" font-size="12" fill="#7C8CF8">"id"</text><text x="84" y="104" font-family="monospace" font-size="12" fill="#fff">: </text><text x="96" y="104" font-family="monospace" font-size="12" fill="#F9C859">42</text><text x="108" y="104" font-family="monospace" font-size="12" fill="#888">,</text>
+  <text x="44" y="124" font-family="monospace" font-size="12" fill="#7C8CF8">"name"</text><text x="100" y="124" font-family="monospace" font-size="12" fill="#fff">: </text><text x="112" y="124" font-family="monospace" font-size="12" fill="#A8FF78">"Олена Коваль"</text><text x="234" y="124" font-family="monospace" font-size="12" fill="#888">,</text>
+  <text x="44" y="144" font-family="monospace" font-size="12" fill="#7C8CF8">"email"</text><text x="108" y="144" font-family="monospace" font-size="12" fill="#fff">: </text><text x="120" y="144" font-family="monospace" font-size="12" fill="#A8FF78">"olena@example.com"</text><text x="282" y="144" font-family="monospace" font-size="12" fill="#888">,</text>
+  <text x="44" y="164" font-family="monospace" font-size="12" fill="#7C8CF8">"role"</text><text x="100" y="164" font-family="monospace" font-size="12" fill="#fff">: </text><text x="112" y="164" font-family="monospace" font-size="12" fill="#A8FF78">"student"</text><text x="192" y="164" font-family="monospace" font-size="12" fill="#888">,</text>
+  <text x="44" y="184" font-family="monospace" font-size="12" fill="#7C8CF8">"courses"</text><text x="124" y="184" font-family="monospace" font-size="12" fill="#fff">: </text><text x="136" y="184" font-family="monospace" font-size="12" fill="#F9C859">[</text>
+  <text x="64" y="204" font-family="monospace" font-size="12" fill="#A8FF78">"Frontend Pro"</text><text x="186" y="204" font-family="monospace" font-size="12" fill="#888">,</text>
+  <text x="64" y="224" font-family="monospace" font-size="12" fill="#A8FF78">"JavaScript Advanced"</text>
+  <text x="44" y="244" font-family="monospace" font-size="12" fill="#F9C859">]</text>
+  <text x="24" y="264" font-family="monospace" font-size="12" fill="#888">}</text>
+</svg>`},
+    {tab:'SQL запит',desc:'Типовий запит до бази даних — знайти всіх активних студентів з їхніми курсами.',
+     svg:`<svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <rect width="520" height="220" fill="#1E1E2E" rx="12"/>
+  <rect x="0" y="0" width="520" height="36" rx="12" fill="#2A2A3E"/>
+  <rect x="0" y="24" width="520" height="12" fill="#2A2A3E"/>
+  <circle cx="20" cy="18" r="6" fill="#FF5F57"/><circle cx="40" cy="18" r="6" fill="#FFBD2E"/><circle cx="60" cy="18" r="6" fill="#28C840"/>
+  <text x="200" y="23" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#888">query.sql</text>
+  <text x="24" y="62" font-family="monospace" font-size="13" fill="#7C8CF8">SELECT</text>
+  <text x="24" y="82" font-family="monospace" font-size="13" fill="#fff">  u.name, u.email,</text>
+  <text x="24" y="102" font-family="monospace" font-size="13" fill="#fff">  c.title </text><text x="122" y="102" font-family="monospace" font-size="13" fill="#7C8CF8">AS</text><text x="146" y="102" font-family="monospace" font-size="13" fill="#fff"> course_name,</text>
+  <text x="24" y="122" font-family="monospace" font-size="13" fill="#fff">  e.enrolled_at</text>
+  <text x="24" y="142" font-family="monospace" font-size="13" fill="#7C8CF8">FROM</text><text x="70" y="142" font-family="monospace" font-size="13" fill="#A8FF78"> users u</text>
+  <text x="24" y="162" font-family="monospace" font-size="13" fill="#7C8CF8">JOIN</text><text x="66" y="162" font-family="monospace" font-size="13" fill="#A8FF78"> enrollments e </text><text x="204" y="162" font-family="monospace" font-size="13" fill="#7C8CF8">ON</text><text x="228" y="162" font-family="monospace" font-size="13" fill="#fff"> u.id = e.user_id</text>
+  <text x="24" y="182" font-family="monospace" font-size="13" fill="#7C8CF8">JOIN</text><text x="66" y="182" font-family="monospace" font-size="13" fill="#A8FF78"> courses c </text><text x="174" y="182" font-family="monospace" font-size="13" fill="#7C8CF8">ON</text><text x="198" y="182" font-family="monospace" font-size="13" fill="#fff"> e.course_id = c.id</text>
+  <text x="24" y="202" font-family="monospace" font-size="13" fill="#7C8CF8">WHERE</text><text x="78" y="202" font-family="monospace" font-size="13" fill="#fff"> u.is_active = </text><text x="218" y="202" font-family="monospace" font-size="13" fill="#F9C859">true</text><text x="254" y="202" font-family="monospace" font-size="13" fill="#888">;</text>
+</svg>`},
+  ],
+  uiux:[
+    {tab:'Мобільний екран',desc:'Екран онбордингу мобільного застосунку — один із перших реальних завдань UX/UI дизайнера.',
+     svg:`<svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="160" y="10" width="200" height="300" rx="24" fill="white" stroke="#EDEDF9" stroke-width="2"/>
+  <rect x="164" y="14" width="192" height="292" rx="21" fill="#F8F8FB"/>
+  <rect x="215" y="20" width="90" height="8" rx="4" fill="#E0DEE9"/>
+  <rect x="176" y="48" width="168" height="100" rx="16" fill="#E2C6FF"/>
+  <text x="260" y="105" text-anchor="middle" font-size="40">🎯</text>
+  <text x="260" y="172" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#212121">Знайди своє</text>
+  <text x="260" y="190" text-anchor="middle" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#212121">IT-покликання</text>
+  <text x="260" y="212" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Пройди квіз і дізнайся</text>
+  <text x="260" y="226" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">яка профессія для тебе</text>
+  <rect x="186" y="244" width="148" height="36" rx="18" fill="#8D59FF"/>
+  <text x="260" y="267" text-anchor="middle" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="white">Почати квіз</text>
+  <text x="260" y="296" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#8D59FF">Вже є акаунт? Увійти</text>
+  <circle cx="224" cy="310" r="3" fill="#EDEDF9"/>
+  <circle cx="260" cy="310" r="4" fill="#8D59FF"/>
+  <circle cx="296" cy="310" r="3" fill="#EDEDF9"/>
+</svg>`},
+    {tab:'Wireframe',desc:'Чорно-білий wireframe — так дизайнер планує структуру сторінки перед тим, як додати кольори.',
+     svg:`<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:white;">
+  <rect x="10" y="10" width="500" height="40" rx="6" fill="none" stroke="#B3B3BF" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="20" y="20" width="60" height="20" rx="3" fill="#E0DEE9"/>
+  <rect x="320" y="20" width="50" height="20" rx="3" fill="#E0DEE9"/>
+  <rect x="380" y="20" width="50" height="20" rx="3" fill="#E0DEE9"/>
+  <rect x="440" y="20" width="60" height="20" rx="10" fill="#B3B3BF"/>
+  <rect x="10" y="60" width="240" height="220" rx="6" fill="none" stroke="#B3B3BF" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="20" y="70" width="220" height="120" rx="4" fill="#EDEDF9"/>
+  <line x1="20" y1="70" x2="240" y2="190" stroke="#B3B3BF" stroke-width="1"/>
+  <line x1="240" y1="70" x2="20" y2="190" stroke="#B3B3BF" stroke-width="1"/>
+  <rect x="20" y="200" width="140" height="12" rx="3" fill="#E0DEE9"/>
+  <rect x="20" y="220" width="200" height="8" rx="3" fill="#EDEDF9"/>
+  <rect x="20" y="234" width="180" height="8" rx="3" fill="#EDEDF9"/>
+  <rect x="20" y="256" width="80" height="28" rx="14" fill="#B3B3BF"/>
+  <rect x="260" y="60" width="240" height="220" rx="6" fill="none" stroke="#B3B3BF" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <rect x="270" y="70" width="220" height="120" rx="4" fill="#EDEDF9"/>
+  <line x1="270" y1="70" x2="490" y2="190" stroke="#B3B3BF" stroke-width="1"/>
+  <line x1="490" y1="70" x2="270" y2="190" stroke="#B3B3BF" stroke-width="1"/>
+  <rect x="270" y="200" width="140" height="12" rx="3" fill="#E0DEE9"/>
+  <rect x="270" y="220" width="200" height="8" rx="3" fill="#EDEDF9"/>
+  <rect x="270" y="234" width="180" height="8" rx="3" fill="#EDEDF9"/>
+  <rect x="270" y="256" width="80" height="28" rx="14" fill="#B3B3BF"/>
+  <text x="260" y="295" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="#B3B3BF">Wireframe — Сторінка каталогу v1.2</text>
+</svg>`},
+  ],
+  marketing:[
+    {tab:'SMM банер',desc:'Instagram-банер для анонсу курсу — реальний формат роботи Marketing Designer кожного тижня.',
+     svg:`<svg viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="135" y="10" width="250" height="300" rx="16" fill="#1A1A40"/>
+  <rect x="145" y="20" width="230" height="160" rx="12" fill="#8D59FF"/>
+  <rect x="155" y="30" width="210" height="140" rx="8" fill="url(#grad1)"/>
+  <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#8D59FF"/><stop offset="100%" style="stop-color:#23C0AD"/></linearGradient></defs>
+  <text x="260" y="80" text-anchor="middle" font-size="36">🚀</text>
+  <text x="260" y="112" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="white">FRONTEND</text>
+  <text x="260" y="132" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#FCF050">PRO КУРС</text>
+  <text x="260" y="155" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="rgba(255,255,255,0.8)">Старт 1 червня</text>
+  <text x="260" y="208" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="white">Від нуля до junior</text>
+  <text x="260" y="226" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="white">за 6 місяців</text>
+  <rect x="197" y="240" width="126" height="32" rx="16" fill="#FCF050"/>
+  <text x="260" y="261" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="800" fill="#1A1A40">Записатись →</text>
+  <text x="260" y="290" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="#B3B3BF">DAN.IT Education Hub</text>
+</svg>`},
+    {tab:'Email-банер',desc:'Шапка email-розсилки — ще один типовий формат для Marketing Designer.',
+     svg:`<svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="60" y="10" width="400" height="180" rx="12" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <rect x="60" y="10" width="400" height="70" rx="12" fill="#212121"/>
+  <rect x="60" y="58" width="400" height="22" fill="#212121"/>
+  <text x="260" y="52" text-anchor="middle" font-family="Manrope,sans-serif" font-size="20" font-weight="800" fill="white">DAN<tspan fill="#8D59FF">.</tspan>IT</text>
+  <text x="260" y="108" text-anchor="middle" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="#212121">🎉 Новий набір відкрито!</text>
+  <text x="260" y="130" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" fill="#64646B">Встигни зайняти місце у літньому потоці</text>
+  <text x="260" y="146" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" fill="#64646B">Frontend · UI/UX · Data Science</text>
+  <rect x="185" y="156" width="150" height="26" rx="13" fill="#8D59FF"/>
+  <text x="260" y="174" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="white">Обрати курс</text>
+</svg>`},
+  ],
+  devops:[
+    {tab:'CI/CD пайплайн',desc:'Так виглядає автоматичний пайплайн деплою — DevOps налаштовує це, щоб код потрапляв на сервер без ручної роботи.',
+     svg:`<svg viewBox="0 0 520 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="180" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <text x="260" y="36" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="#64646B">GitHub Actions — Deploy Pipeline</text>
+  ${[
+    {x:30, label:'Push', icon:'📤', color:'#DCFEBC', ok:true},
+    {x:120, label:'Tests', icon:'🔍', color:'#BBECFF', ok:true},
+    {x:210, label:'Build', icon:'🔨', color:'#E2C6FF', ok:true},
+    {x:300, label:'Docker', icon:'📦', color:'#FCF050', ok:true},
+    {x:390, label:'Deploy', icon:'🚀', color:'#DCFEBC', ok:true},
+  ].map(s=>`
+    <rect x="${s.x}" y="60" width="80" height="80" rx="12" fill="${s.color}" stroke="#EDEDF9" stroke-width="1.5"/>
+    <text x="${s.x+40}" y="103" text-anchor="middle" font-size="22">${s.icon}</text>
+    <text x="${s.x+40}" y="124" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="#212121">${s.label}</text>
+    <text x="${s.x+40}" y="140" text-anchor="middle" font-size="12">✅</text>
+  `).join('')}
+  <line x1="110" y1="100" x2="120" y2="100" stroke="#B3B3BF" stroke-width="2" marker-end="url(#arr)"/>
+  <line x1="200" y1="100" x2="210" y2="100" stroke="#B3B3BF" stroke-width="2"/>
+  <line x1="290" y1="100" x2="300" y2="100" stroke="#B3B3BF" stroke-width="2"/>
+  <line x1="380" y1="100" x2="390" y2="100" stroke="#B3B3BF" stroke-width="2"/>
+  <text x="260" y="178" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#23C0AD" font-weight="700">✅ Deployed to production — 2m 34s</text>
+</svg>`},
+    {tab:'Моніторинг',desc:'Дашборд моніторингу серверів — DevOps дивиться на це щоранку, щоб переконатися що все працює.',
+     svg:`<svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#1E1E2E;">
+  <rect width="520" height="260" fill="#1E1E2E" rx="12"/>
+  <text x="24" y="30" font-family="Manrope,sans-serif" font-size="14" font-weight="700" fill="#EDEDF9">System Monitor</text>
+  <text x="430" y="30" font-family="Manrope,sans-serif" font-size="11" fill="#28C840">● All systems OK</text>
+  ${[
+    {x:14, label:'CPU', pct:42, color:'#7C8CF8'},
+    {x:144, label:'Memory', pct:67, color:'#A8FF78'},
+    {x:274, label:'Disk', pct:28, color:'#F9C859'},
+    {x:404, label:'Network', pct:15, color:'#23C0AD'},
+  ].map(m=>`
+    <rect x="${m.x}" y="44" width="106" height="80" rx="10" fill="#2A2A3E"/>
+    <text x="${m.x+53}" y="68" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#888">${m.label}</text>
+    <text x="${m.x+53}" y="100" text-anchor="middle" font-family="Manrope,sans-serif" font-size="22" font-weight="800" fill="${m.color}">${m.pct}%</text>
+    <rect x="${m.x+10}" y="112" width="86" height="6" rx="3" fill="#3A3A50"/>
+    <rect x="${m.x+10}" y="112" width="${86*m.pct/100}" height="6" rx="3" fill="${m.color}"/>
+  `).join('')}
+  <rect x="14" y="140" width="492" height="108" rx="10" fill="#2A2A3E"/>
+  <text x="24" y="160" font-family="Manrope,sans-serif" font-size="11" fill="#888">HTTP Requests / хв</text>
+  ${Array.from({length:24},(_,i)=>{
+    const h=30+Math.random()*60;
+    return `<rect x="${24+i*19}" y="${220-h}" width="14" height="${h}" rx="3" fill="${i===23?'#7C8CF8':'#3A3A50'}"/>`;
+  }).join('')}
+  <text x="260" y="240" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="#555">Останні 24 години</text>
+</svg>`},
+  ],
+  'qa-manual':[
+    {tab:'Баг-репорт',desc:'Так виглядає якісний баг-репорт у Jira — QA Manual Engineer пише такі щодня.',
+     svg:`<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="280" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <rect x="10" y="10" width="500" height="44" rx="16" fill="#F8F8FB"/>
+  <rect x="10" y="42" width="500" height="12" fill="#F8F8FB"/>
+  <rect x="20" y="18" width="40" height="20" rx="10" fill="#FFD6D6"/>
+  <text x="40" y="32" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#c00">BUG</text>
+  <text x="70" y="32" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">DAN-1042</text>
+  <text x="20" y="70" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#212121">Кнопка "Записатись" не активується після вибору курсу</text>
+  <line x1="20" y1="80" x2="500" y2="80" stroke="#EDEDF9" stroke-width="1"/>
+  ${[
+    {label:'Пріоритет', val:'🔴 Critical', vc:'#c00'},
+    {label:'Середовище', val:'Chrome 124 / Windows', vc:'#212121'},
+    {label:'Версія', val:'v2.4.1-staging', vc:'#212121'},
+    {label:'Відтворюється', val:'100% (5/5 спроб)', vc:'#212121'},
+  ].map((r,i)=>`
+    <text x="30" y="${104+i*22}" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">${r.label}:</text>
+    <text x="160" y="${104+i*22}" font-family="Manrope,sans-serif" font-size="11" font-weight="600" fill="${r.vc}">${r.val}</text>
+  `).join('')}
+  <line x1="20" y1="198" x2="500" y2="198" stroke="#EDEDF9" stroke-width="1"/>
+  <text x="30" y="218" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="#212121">Кроки відтворення:</text>
+  <text x="30" y="236" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">1. Відкрити сторінку /courses</text>
+  <text x="30" y="252" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">2. Натиснути на курс "Frontend Pro"</text>
+  <text x="30" y="268" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">3. Вибрати дату початку → кнопка залишається сірою ❌</text>
+  <text x="30" y="284" font-family="Manrope,sans-serif" font-size="11" fill="#23C0AD">Очікувано: кнопка активується і дозволяє перейти до оплати ✅</text>
+</svg>`},
+    {tab:'Тест-кейс',desc:'Тест-кейс описує як перевірити конкретну функцію — основний документ QA Manual Engineer.',
+     svg:`<svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="260" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <rect x="10" y="10" width="500" height="40" rx="16" fill="#F8F8FB"/>
+  <rect x="10" y="38" width="500" height="12" fill="#F8F8FB"/>
+  <text x="24" y="36" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">TC-087 · Реєстрація нового користувача</text>
+  <rect x="20" y="58" width="480" height="22" rx="4" fill="#F8F8FB"/>
+  <text x="30" y="73" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#64646B">#</text>
+  <text x="60" y="73" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#64646B">Крок</text>
+  <text x="310" y="73" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#64646B">Очікуваний результат</text>
+  <text x="456" y="73" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#64646B">Статус</text>
+  ${[
+    {step:'Відкрити /register', exp:'Форма реєстрації відображається', st:'✅', stc:'#23C0AD'},
+    {step:'Ввести коректний email', exp:'Поле підсвічується зеленим', st:'✅', stc:'#23C0AD'},
+    {step:'Ввести пароль < 8 символів', exp:'Помилка валідації під полем', st:'✅', stc:'#23C0AD'},
+    {step:'Ввести коректний пароль', exp:'Кнопка "Зареєструватись" активна', st:'✅', stc:'#23C0AD'},
+    {step:'Натиснути "Зареєструватись"', exp:'Redirect на /dashboard', st:'❌', stc:'#c00'},
+  ].map((r,i)=>`
+    <rect x="20" y="${84+i*34}" width="480" height="33" rx="4" fill="${i%2===0?'white':'#F8F8FB'}"/>
+    <text x="30" y="${105+i*34}" font-family="Manrope,sans-serif" font-size="10" fill="#B3B3BF">${i+1}</text>
+    <text x="60" y="${105+i*34}" font-family="Manrope,sans-serif" font-size="10" fill="#212121">${r.step}</text>
+    <text x="310" y="${105+i*34}" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">${r.exp}</text>
+    <text x="460" y="${105+i*34}" font-family="Manrope,sans-serif" font-size="12" fill="${r.stc}">${r.st}</text>
+  `).join('')}
+</svg>`},
+  ],
+  'qa-auto':[
+    {tab:'Автотест',desc:'Реальний автотест на Playwright — перевіряє що форма реєстрації працює коректно.',
+     svg:`<svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+  <rect width="520" height="280" fill="#1E1E2E" rx="12"/>
+  <rect x="0" y="0" width="520" height="36" rx="12" fill="#2A2A3E"/>
+  <rect x="0" y="24" width="520" height="12" fill="#2A2A3E"/>
+  <circle cx="20" cy="18" r="6" fill="#FF5F57"/><circle cx="40" cy="18" r="6" fill="#FFBD2E"/><circle cx="60" cy="18" r="6" fill="#28C840"/>
+  <text x="200" y="23" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#888">test_register.py</text>
+  <text x="24" y="60" font-family="monospace" font-size="11" fill="#7C8CF8">import</text><text x="72" y="60" font-family="monospace" font-size="11" fill="#fff"> pytest</text>
+  <text x="24" y="76" font-family="monospace" font-size="11" fill="#7C8CF8">from</text><text x="56" y="76" font-family="monospace" font-size="11" fill="#fff"> playwright.sync_api </text><text x="230" y="76" font-family="monospace" font-size="11" fill="#7C8CF8">import</text><text x="278" y="76" font-family="monospace" font-size="11" fill="#fff"> sync_playwright</text>
+  <text x="24" y="100" font-family="monospace" font-size="11" fill="#7C8CF8">def</text><text x="48" y="100" font-family="monospace" font-size="11" fill="#A8FF78"> test_registration_success</text><text x="240" y="100" font-family="monospace" font-size="11" fill="#fff">():</text>
+  <text x="44" y="120" font-family="monospace" font-size="11" fill="#888"># Відкриваємо браузер та переходимо на сторінку</text>
+  <text x="44" y="138" font-family="monospace" font-size="11" fill="#7C8CF8">with</text><text x="76" y="138" font-family="monospace" font-size="11" fill="#fff"> sync_playwright() </text><text x="196" y="138" font-family="monospace" font-size="11" fill="#7C8CF8">as</text><text x="216" y="138" font-family="monospace" font-size="11" fill="#fff"> p:</text>
+  <text x="64" y="156" font-family="monospace" font-size="11" fill="#fff">  browser = p.chromium.launch()</text>
+  <text x="64" y="174" font-family="monospace" font-size="11" fill="#fff">  page = browser.new_page()</text>
+  <text x="64" y="192" font-family="monospace" font-size="11" fill="#fff">  page.goto(</text><text x="154" y="192" font-family="monospace" font-size="11" fill="#A8FF78">"https://dan.it/register"</text><text x="332" y="192" font-family="monospace" font-size="11" fill="#fff">)</text>
+  <text x="64" y="210" font-family="monospace" font-size="11" fill="#fff">  page.fill(</text><text x="148" y="210" font-family="monospace" font-size="11" fill="#A8FF78">"#email"</text><text x="214" y="210" font-family="monospace" font-size="11" fill="#fff">, </text><text x="226" y="210" font-family="monospace" font-size="11" fill="#A8FF78">"test@example.com"</text><text x="374" y="210" font-family="monospace" font-size="11" fill="#fff">)</text>
+  <text x="64" y="228" font-family="monospace" font-size="11" fill="#fff">  page.click(</text><text x="152" y="228" font-family="monospace" font-size="11" fill="#A8FF78">"button[type=submit]"</text><text x="330" y="228" font-family="monospace" font-size="11" fill="#fff">)</text>
+  <text x="64" y="246" font-family="monospace" font-size="11" fill="#fff">  </text><text x="72" y="246" font-family="monospace" font-size="11" fill="#F9C859">assert</text><text x="114" y="246" font-family="monospace" font-size="11" fill="#fff"> page.url </text><text x="186" y="246" font-family="monospace" font-size="11" fill="#7C8CF8">==</text><text x="206" y="246" font-family="monospace" font-size="11" fill="#A8FF78"> "/dashboard"</text>
+  <rect x="14" y="258" width="200" height="16" rx="4" fill="#1A3A1A"/>
+  <text x="24" y="270" font-family="monospace" font-size="10" fill="#28C840">✅ PASSED (1.24s)</text>
+</svg>`},
+    {tab:'Звіт тестів',desc:'Allure Report — так виглядає автоматичний звіт після запуску всіх тестів.',
+     svg:`<svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="240" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <rect x="10" y="10" width="500" height="42" rx="16" fill="#F8F8FB"/>
+  <rect x="10" y="40" width="500" height="12" fill="#F8F8FB"/>
+  <text x="30" y="36" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">Allure Report · Build #247</text>
+  <text x="420" y="36" font-family="Manrope,sans-serif" font-size="11" fill="#23C0AD" font-weight="600">● Passed</text>
+  <circle cx="120" cy="140" r="60" fill="none" stroke="#EDEDF9" stroke-width="12"/>
+  <circle cx="120" cy="140" r="60" fill="none" stroke="#23C0AD" stroke-width="12" stroke-dasharray="320 377" stroke-dashoffset="-28" transform="rotate(-90 120 140)"/>
+  <circle cx="120" cy="140" r="60" fill="none" stroke="#FF5F57" stroke-width="12" stroke-dasharray="30 377" stroke-dashoffset="-348" transform="rotate(-90 120 140)"/>
+  <text x="120" y="134" text-anchor="middle" font-family="Manrope,sans-serif" font-size="22" font-weight="800" fill="#212121">87%</text>
+  <text x="120" y="152" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">passed</text>
+  ${[
+    {label:'✅ Passed', val:'174', color:'#23C0AD'},
+    {label:'❌ Failed', val:'20', color:'#FF5F57'},
+    {label:'⏭ Skipped', val:'6', color:'#B3B3BF'},
+    {label:'⏱ Duration', val:'4m 12s', color:'#8D59FF'},
+  ].map((s,i)=>`
+    <rect x="220" y="${68+i*44}" width="260" height="36" rx="10" fill="#F8F8FB"/>
+    <text x="234" y="${91+i*44}" font-family="Manrope,sans-serif" font-size="12" fill="#64646B">${s.label}</text>
+    <text x="466" y="${91+i*44}" text-anchor="end" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="${s.color}">${s.val}</text>
+  `).join('')}
+</svg>`},
+  ],
+  pm:[
+    {tab:'Product Roadmap',desc:'Квартальний roadmap продукту — PM презентує його команді та стейкхолдерам кожен квартал.',
+     svg:`<svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="260" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <text x="30" y="40" font-family="Manrope,sans-serif" font-size="14" font-weight="800" fill="#212121">Product Roadmap 2024</text>
+  ${['Q1','Q2','Q3','Q4'].map((q,i)=>`
+    <rect x="${118+i*96}" y="50" width="90" height="24" rx="12" fill="${['#E2C6FF','#DCFEBC','#BBECFF','#FCF050'][i]}"/>
+    <text x="${163+i*96}" y="66" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="#212121">${q}</text>
+  `).join('')}
+  ${[
+    {label:'🔐 Авторизація', q:0, span:1, color:'#E2C6FF'},
+    {label:'📚 Каталог курсів', q:1, span:1, color:'#DCFEBC'},
+    {label:'💳 Оплата', q:1, span:1, color:'#DCFEBC'},
+    {label:'📊 Дашборд студента', q:2, span:2, color:'#BBECFF'},
+    {label:'🤖 AI-рекомендації', q:3, span:1, color:'#FCF050'},
+    {label:'📱 Мобільний додаток', q:2, span:2, color:'#E2C6FF'},
+  ].map((f,i)=>`
+    <rect x="${118+f.q*96}" y="${88+i*28}" width="${f.span*96-6}" height="22" rx="8" fill="${f.color}" stroke="white" stroke-width="1"/>
+    <text x="${120+f.q*96+6}" y="${103+i*28}" font-family="Manrope,sans-serif" font-size="10" font-weight="600" fill="#212121">${f.label}</text>
+  `).join('')}
+  <line x1="118" y1="50" x2="118" y2="260" stroke="#EDEDF9" stroke-width="1"/>
+  <line x1="214" y1="50" x2="214" y2="260" stroke="#EDEDF9" stroke-width="1"/>
+  <line x1="310" y1="50" x2="310" y2="260" stroke="#EDEDF9" stroke-width="1"/>
+  <line x1="406" y1="50" x2="406" y2="260" stroke="#EDEDF9" stroke-width="1"/>
+</svg>`},
+    {tab:'Метрики',desc:'Дашборд продуктових метрик — PM дивиться на нього щодня щоб розуміти здоров\'я продукту.',
+     svg:`<svg viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="240" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <text x="30" y="40" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">Product Metrics · Травень 2024</text>
+  ${[
+    {x:20, label:'DAU', val:'12 840', delta:'+14%', up:true, color:'#DCFEBC'},
+    {x:148, label:'Retention D7', val:'62%', delta:'+3%', up:true, color:'#BBECFF'},
+    {x:276, label:'Conversion', val:'4.2%', delta:'-0.3%', up:false, color:'#FFE4E4'},
+    {x:404, label:'NPS', val:'71', delta:'+5', up:true, color:'#E2C6FF'},
+  ].map(m=>`
+    <rect x="${m.x+10}" y="52" width="108" height="74" rx="12" fill="${m.color}"/>
+    <text x="${m.x+64}" y="76" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">${m.label}</text>
+    <text x="${m.x+64}" y="100" text-anchor="middle" font-family="Manrope,sans-serif" font-size="18" font-weight="800" fill="#212121">${m.val}</text>
+    <text x="${m.x+64}" y="118" text-anchor="middle" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="${m.up?'#23C0AD':'#FF5F57'}">${m.delta}</text>
+  `).join('')}
+  <rect x="20" y="138" width="480" height="100" rx="12" fill="#F8F8FB"/>
+  <text x="34" y="158" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">DAU за останні 30 днів</text>
+  ${Array.from({length:30},(_,i)=>{
+    const h = 20 + Math.sin(i/4)*20 + i*1.2;
+    return `<rect x="${34+i*15}" y="${220-h}" width="10" height="${h}" rx="3" fill="${i>=27?'#8D59FF':'#E2C6FF'}"/>`;
+  }).join('')}
+</svg>`},
+  ],
+  projmgr:[
+    {tab:'Kanban дошка',desc:'Kanban-дошка у Jira — Project Manager бачить стан усіх задач спринту в реальному часі.',
+     svg:`<svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="260" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <text x="30" y="38" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">Sprint 14 · 13–27 травня</text>
+  ${[
+    {x:18, title:'TO DO', color:'#F8F8FB', count:3},
+    {x:145, title:'IN PROGRESS', color:'#EEF3FF', count:4},
+    {x:272, title:'REVIEW', color:'#FFF9E6', count:2},
+    {x:399, title:'DONE', color:'#F0FFF4', count:6},
+  ].map(col=>`
+    <rect x="${col.x}" y="48" width="116" height="222" rx="12" fill="${col.color}"/>
+    <text x="${col.x+58}" y="68" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#64646B">${col.title}</text>
+    <rect x="${col.x+44}" y="58" width="24" height="16" rx="8" fill="#EDEDF9"/>
+    <text x="${col.x+56}" y="70" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">${col.count}</text>
+  `).join('')}
+  ${[
+    {col:0, row:0, text:'Форма логіну', tag:'FE', tc:'#E2C6FF'},
+    {col:0, row:1, text:'Валідація email', tag:'FE', tc:'#E2C6FF'},
+    {col:0, row:2, text:'Дизайн профілю', tag:'UI', tc:'#BBECFF'},
+    {col:1, row:0, text:'API авторизації', tag:'BE', tc:'#DCFEBC'},
+    {col:1, row:1, text:'JWT токени', tag:'BE', tc:'#DCFEBC'},
+    {col:1, row:2, text:'Тести реєстрації', tag:'QA', tc:'#FCF050'},
+    {col:2, row:0, text:'Головна сторінка', tag:'FE', tc:'#E2C6FF'},
+    {col:2, row:1, text:'SQL оптимізація', tag:'BE', tc:'#DCFEBC'},
+    {col:3, row:0, text:'Каталог курсів', tag:'FE', tc:'#E2C6FF'},
+    {col:3, row:1, text:'Пошук', tag:'FE', tc:'#E2C6FF'},
+  ].map(c=>`
+    <rect x="${26+c.col*127}" y="${82+c.row*58}" width="100" height="48" rx="8" fill="white" stroke="#EDEDF9" stroke-width="1"/>
+    <text x="${36+c.col*127}" y="${100+c.row*58}" font-family="Manrope,sans-serif" font-size="10" fill="#212121">${c.text}</text>
+    <rect x="${36+c.col*127}" y="${108+c.row*58}" width="26" height="14" rx="7" fill="${c.tc}"/>
+    <text x="${49+c.col*127}" y="${119+c.row*58}" text-anchor="middle" font-family="Manrope,sans-serif" font-size="8" font-weight="700" fill="#212121">${c.tag}</text>
+  `).join('')}
+</svg>`},
+  ],
+  ba:[
+    {tab:'BPMN схема',desc:'Схема бізнес-процесу у нотації BPMN — BA малює таке, щоб пояснити розробникам як працює процес.',
+     svg:`<svg viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="200" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <text x="260" y="32" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" font-weight="700" fill="#64646B">Процес: Реєстрація студента на курс</text>
+  <circle cx="46" cy="120" r="14" fill="#DCFEBC" stroke="#23C0AD" stroke-width="2"/>
+  <text x="46" y="125" text-anchor="middle" font-size="10">▶</text>
+  <text x="46" y="148" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">Старт</text>
+  <line x1="60" y1="120" x2="86" y2="120" stroke="#B3B3BF" stroke-width="1.5" marker-end="url(#tri)"/>
+  <rect x="86" y="100" width="80" height="40" rx="8" fill="#E2C6FF" stroke="#8D59FF" stroke-width="1.5"/>
+  <text x="126" y="116" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="600" fill="#212121">Вибір</text>
+  <text x="126" y="130" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="600" fill="#212121">курсу</text>
+  <line x1="166" y1="120" x2="196" y2="120" stroke="#B3B3BF" stroke-width="1.5"/>
+  <polygon points="210,110 230,120 210,130" fill="none" stroke="#F9C859" stroke-width="2"/>
+  <text x="218" y="148" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">Місця є?</text>
+  <line x1="230" y1="120" x2="256" y2="120" stroke="#B3B3BF" stroke-width="1.5"/>
+  <text x="242" y="114" text-anchor="middle" font-family="Manrope,sans-serif" font-size="8" fill="#23C0AD">так</text>
+  <rect x="256" y="100" width="80" height="40" rx="8" fill="#BBECFF" stroke="#23C0AD" stroke-width="1.5"/>
+  <text x="296" y="116" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="600" fill="#212121">Оплата</text>
+  <text x="296" y="130" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="600" fill="#212121">курсу</text>
+  <line x1="336" y1="120" x2="362" y2="120" stroke="#B3B3BF" stroke-width="1.5"/>
+  <rect x="362" y="100" width="80" height="40" rx="8" fill="#DCFEBC" stroke="#23C0AD" stroke-width="1.5"/>
+  <text x="402" y="116" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="600" fill="#212121">Доступ до</text>
+  <text x="402" y="130" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" font-weight="600" fill="#212121">матеріалів</text>
+  <line x1="442" y1="120" x2="462" y2="120" stroke="#B3B3BF" stroke-width="1.5"/>
+  <circle cx="474" cy="120" r="14" fill="#FFD6D6" stroke="#FF5F57" stroke-width="2"/>
+  <text x="474" y="125" text-anchor="middle" font-family="Manrope,sans-serif" font-size="12" fill="#FF5F57">■</text>
+  <text x="474" y="148" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">Кінець</text>
+  <line x1="210" y1="130" x2="210" y2="175" stroke="#FF5F57" stroke-width="1.5" stroke-dasharray="4,2"/>
+  <text x="218" y="162" font-family="Manrope,sans-serif" font-size="8" fill="#FF5F57">ні</text>
+  <rect x="166" y="162" width="88" height="26" rx="8" fill="#FFE4E4" stroke="#FF5F57" stroke-width="1"/>
+  <text x="210" y="179" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#c00">Лист очікування</text>
+</svg>`},
+  ],
+  'data-analyst':[
+    {tab:'Дашборд',desc:'Аналітичний дашборд у Tableau — Data Analyst будує такі для бізнесу щоб відстежувати KPI.',
+     svg:`<svg viewBox="0 0 520 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="260" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <text x="30" y="38" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">Продажі DAN.IT · Квітень 2024</text>
+  ${[
+    {x:20, label:'Нові студенти', val:'248', delta:'↑ 18%', color:'#DCFEBC'},
+    {x:146, label:'Виручка', val:'₴612К', delta:'↑ 22%', color:'#BBECFF'},
+    {x:272, label:'Конверсія', val:'6.4%', delta:'↑ 0.8%', color:'#E2C6FF'},
+    {x:398, label:'Середній чек', val:'₴2 470', delta:'↑ 4%', color:'#FCF050'},
+  ].map(s=>`
+    <rect x="${s.x}" y="50" width="110" height="66" rx="12" fill="${s.color}"/>
+    <text x="${s.x+55}" y="72" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">${s.label}</text>
+    <text x="${s.x+55}" y="96" text-anchor="middle" font-family="Manrope,sans-serif" font-size="17" font-weight="800" fill="#212121">${s.val}</text>
+    <text x="${s.x+55}" y="112" text-anchor="middle" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="#23C0AD">${s.delta}</text>
+  `).join('')}
+  <rect x="20" y="128" width="295" height="130" rx="12" fill="#F8F8FB"/>
+  <text x="34" y="148" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Реєстрації по тижнях</text>
+  ${[28,42,36,55,48,62,58,70,65,80,74,88].map((h,i)=>`
+    <rect x="${34+i*22}" y="${230-h}" width="16" height="${h}" rx="4" fill="${i>=9?'#8D59FF':'#E2C6FF'}"/>
+  `).join('')}
+  <rect x="324" y="128" width="186" height="130" rx="12" fill="#F8F8FB"/>
+  <text x="338" y="148" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Курси по популярності</text>
+  ${[
+    {label:'Frontend', pct:32, color:'#8D59FF'},
+    {label:'UI/UX', pct:24, color:'#23C0AD'},
+    {label:'Data', pct:20, color:'#FCF050'},
+    {label:'QA', pct:14, color:'#E2C6FF'},
+    {label:'Інші', pct:10, color:'#EDEDF9'},
+  ].map((r,i)=>`
+    <text x="338" y="${166+i*18}" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">${r.label}</text>
+    <rect x="394" y="${155+i*18}" width="100" height="10" rx="5" fill="#EDEDF9"/>
+    <rect x="394" y="${155+i*18}" width="${r.pct*3}" height="10" rx="5" fill="${r.color}"/>
+    <text x="500" y="${165+i*18}" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">${r.pct}%</text>
+  `).join('')}
+</svg>`},
+  ],
+  'data-scientist':[
+    {tab:'ML модель',desc:'Матриця плутанини та графік навчання — типові артефакти Data Scientist після тренування моделі.',
+     svg:`<svg viewBox="0 0 520 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="250" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <text x="30" y="36" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">Модель: Прогноз відтоку студентів</text>
+  <text x="30" y="58" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Матриця плутанини</text>
+  ${[
+    {r:0,c:0,v:142,color:'rgba(35,192,173,.25)',label:'True Neg'},
+    {r:0,c:1,v:18,color:'rgba(255,95,87,.15)',label:'False Pos'},
+    {r:1,c:0,v:12,color:'rgba(255,95,87,.15)',label:'False Neg'},
+    {r:1,c:1,v:88,color:'rgba(141,89,255,.2)',label:'True Pos'},
+  ].map(cell=>`
+    <rect x="${30+cell.c*86}" y="${70+cell.r*70}" width="80" height="64" rx="8" fill="${cell.color}"/>
+    <text x="${70+cell.c*86}" y="${98+cell.r*70}" text-anchor="middle" font-family="Manrope,sans-serif" font-size="20" font-weight="800" fill="#212121">${cell.v}</text>
+    <text x="${70+cell.c*86}" y="${116+cell.r*70}" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">${cell.label}</text>
+  `).join('')}
+  <text x="70" y="68" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">Pred: 0</text>
+  <text x="156" y="68" text-anchor="middle" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">Pred: 1</text>
+  <text x="22" y="106" font-family="Manrope,sans-serif" font-size="8" fill="#64646B" transform="rotate(-90 22 106)">Real 0</text>
+  <text x="22" y="176" font-family="Manrope,sans-serif" font-size="8" fill="#64646B" transform="rotate(-90 22 176)">Real 1</text>
+  <rect x="240" y="52" width="260" height="190" rx="12" fill="#F8F8FB"/>
+  <text x="258" y="72" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">Крива навчання</text>
+  ${Array.from({length:20},(_,i)=>{
+    const train = 0.55+i*0.02+Math.random()*0.01;
+    const val = 0.50+i*0.018+Math.random()*0.02;
+    return `<circle cx="${258+i*11}" cy="${220-train*120}" r="2.5" fill="#8D59FF"/>
+    <circle cx="${258+i*11}" cy="${220-val*120}" r="2.5" fill="#23C0AD"/>`;
+  }).join('')}
+  <rect x="350" y="220" width="10" height="10" rx="2" fill="#8D59FF"/>
+  <text x="364" y="229" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">Train</text>
+  <rect x="400" y="220" width="10" height="10" rx="2" fill="#23C0AD"/>
+  <text x="414" y="229" font-family="Manrope,sans-serif" font-size="9" fill="#64646B">Val</text>
+  ${[
+    {label:'Accuracy', val:'88.5%', color:'#8D59FF'},
+    {label:'Precision', val:'83.0%', color:'#23C0AD'},
+    {label:'Recall', val:'88.0%', color:'#FCF050'},
+  ].map((m,i)=>`
+    <text x="258" y="${166+i*16}" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">${m.label}: </text>
+    <text x="330" y="${166+i*16}" font-family="Manrope,sans-serif" font-size="10" font-weight="700" fill="${m.color}">${m.val}</text>
+  `).join('')}
+</svg>`},
+  ],
+  hr:[
+    {tab:'Вакансія',desc:'Опис вакансії — HR пише такий текст, щоб залучити правильного кандидата.',
+     svg:`<svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="280" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <rect x="10" y="10" width="500" height="60" rx="16" fill="#1A1A40"/>
+  <rect x="10" y="50" width="500" height="20" fill="#1A1A40"/>
+  <text x="30" y="38" font-family="Manrope,sans-serif" font-size="16" font-weight="800" fill="white">Middle Frontend Developer</text>
+  <text x="30" y="58" font-family="Manrope,sans-serif" font-size="11" fill="#B3B3BF">DAN.IT Education · Київ / Remote · Full-time</text>
+  ${[
+    {icon:'💰', label:'₴80 000 – ₴120 000 / міс'},
+    {icon:'📍', label:'Київ або повністю remote'},
+    {icon:'⏰', label:'Full-time, пн–пт'},
+  ].map((i,idx)=>`
+    <text x="30" y="${94+idx*20}" font-size="13">${i.icon}</text>
+    <text x="52" y="${94+idx*20}" font-family="Manrope,sans-serif" font-size="11" fill="#212121">${i.label}</text>
+  `).join('')}
+  <line x1="20" y1="158" x2="500" y2="158" stroke="#EDEDF9" stroke-width="1"/>
+  <text x="30" y="178" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="#212121">Що ти будеш робити:</text>
+  ${['Розробляти нові фічі на React + TypeScript','Підтримувати та покращувати існуючий код','Брати участь у code review','Тісно працювати з командою дизайну та Backend'].map((t,i)=>`
+    <text x="30" y="${196+i*18}" font-size="10">▸</text>
+    <text x="46" y="${196+i*18}" font-family="Manrope,sans-serif" font-size="11" fill="#64646B">${t}</text>
+  `).join('')}
+  <line x1="20" y1="272" x2="500" y2="272" stroke="#EDEDF9" stroke-width="1"/>
+  <rect x="380" y="278" width="120" height="6" rx="3" fill="#EDEDF9"/>
+  <rect x="380" y="278" width="72" height="6" rx="3" fill="#8D59FF"/>
+  <text x="30" y="286" font-family="Manrope,sans-serif" font-size="10" fill="#B3B3BF">72 / 100 балів відповідності · Активна</text>
+</svg>`},
+    {tab:'Scorecard',desc:'Scorecard кандидата — HR заповнює після інтерв\'ю щоб порівняти кандидатів об\'єктивно.',
+     svg:`<svg viewBox="0 0 520 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;background:#F8F8FB;">
+  <rect x="10" y="10" width="500" height="250" rx="16" fill="white" stroke="#EDEDF9" stroke-width="1.5"/>
+  <rect x="10" y="10" width="500" height="44" rx="16" fill="#F8F8FB"/>
+  <rect x="10" y="40" width="500" height="14" fill="#F8F8FB"/>
+  <text x="30" y="36" font-family="Manrope,sans-serif" font-size="13" font-weight="700" fill="#212121">Scorecard · Марина Петренко · Frontend Dev</text>
+  <text x="430" y="36" font-family="Manrope,sans-serif" font-size="11" fill="#23C0AD" font-weight="600">Рекомендую ✅</text>
+  <text x="30" y="68" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="#64646B">Критерій</text>
+  <text x="300" y="68" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="#64646B">Оцінка</text>
+  <text x="420" y="68" font-family="Manrope,sans-serif" font-size="11" font-weight="700" fill="#64646B">Нотатки</text>
+  ${[
+    {label:'JavaScript / React', score:4, note:'Впевнено знає хуки'},
+    {label:'CSS / Адаптив', score:5, note:'Відмінно'},
+    {label:'Git workflow', score:3, note:'Базові знання'},
+    {label:'Комунікація', score:5, note:'Чітко пояснює думки'},
+    {label:'Вирішення проблем', score:4, note:'Хороший підхід'},
+    {label:'Мотивація', score:5, note:'Дуже вмотивована'},
+  ].map((r,i)=>`
+    <rect x="20" y="${78+i*28}" width="480" height="26" rx="6" fill="${i%2===0?'white':'#F8F8FB'}"/>
+    <text x="30" y="${95+i*28}" font-family="Manrope,sans-serif" font-size="11" fill="#212121">${r.label}</text>
+    <text x="300" y="${95+i*28}" font-family="Manrope,sans-serif" font-size="13">${'⭐'.repeat(r.score)}</text>
+    <text x="420" y="${95+i*28}" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">${r.note}</text>
+  `).join('')}
+  <rect x="20" y="250" width="200" height="4" rx="2" fill="#EDEDF9"/>
+  <rect x="20" y="250" width="160" height="4" rx="2" fill="#23C0AD"/>
+  <text x="30" y="263" font-family="Manrope,sans-serif" font-size="10" fill="#64646B">Загальний бал: 4.3 / 5.0</text>
+</svg>`},
+  ],
+};
+
+function showPortfolio(profId, fromRes) {
+  const p = PROFESSIONS.find(x => x.id === profId);
+  const examples = PORTFOLIO_EXAMPLES[profId] || [];
+  document.getElementById('pf-back-btn').onclick = () => showDetail(profId, fromRes);
+
+  const tabsHtml = examples.map((ex, i) =>
+    `<button class="pf-tab ${i===0?'active':''}" onclick="switchPfTab(${i})">${ex.tab}</button>`
+  ).join('');
+
+  const examplesHtml = examples.map((ex, i) => `
+    <div class="pf-example ${i===0?'active':''}" id="pf-ex-${i}">
+      <p class="pf-desc">${ex.desc}</p>
+      <div class="pf-artifact">${ex.svg}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('portfolio-content').innerHTML = `
+    <div class="detail-back" onclick="showDetail('${profId}',${fromRes})">&#8592; Назад до ${p.name}</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:20px;">
+      <div style="width:56px;height:56px;border-radius:16px;background:${p.colorBg};display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;">${p.icon}</div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:6px;">Приклади робіт</div>
+        <h2>Що робить ${p.name}</h2>
+      </div>
+    </div>
+    <div class="pf-tabs" id="pf-tabs">${tabsHtml}</div>
+    <div class="section-label" style="margin-bottom:10px;">Реальний артефакт</div>
+    ${examplesHtml}
+    <div class="divider"></div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;">
+      <button class="btn btn-primary" onclick="showRoadmap('${profId}',false,${fromRes})">Як цього навчитися? &#8594;</button>
+      <button class="btn btn-ghost" onclick="showDetail('${profId}',${fromRes})">&#8592; Назад</button>
+    </div>`;
+  showScreen('s-portfolio');
+}
+
+function switchPfTab(idx) {
+  document.querySelectorAll('.pf-tab').forEach((t,i) => t.classList.toggle('active', i===idx));
+  document.querySelectorAll('.pf-example').forEach((e,i) => e.classList.toggle('active', i===idx));
+}
+
+const ROADMAPS = {
+  frontend:[
+    {icon:'🌱',label:'Крок 1',title:'Основи веб',duration:'4–6 тижнів',topics:['HTML5 структура','CSS3 стилі','Flexbox та Grid','Адаптивний дизайн'],highlight:'HTML / CSS'},
+    {icon:'⚡',label:'Крок 2',title:'JavaScript',duration:'6–8 тижнів',topics:['Змінні та функції','DOM маніпуляції','Події та форми','Fetch / API запити','ES6+ синтаксис'],highlight:'JavaScript'},
+    {icon:'⚛️',label:'Крок 3',title:'React або Vue',duration:'6–8 тижнів',topics:['Компоненти та пропси','State та хуки','Роутинг','Робота з API'],highlight:'React / Vue'},
+    {icon:'🛠️',label:'Крок 4',title:'Інструменти розробника',duration:'2–3 тижні',topics:['Git та GitHub','VS Code налаштування','npm / yarn','Figma — читати макети'],highlight:'Git'},
+    {icon:'🚀',label:'Крок 5',title:'Перший проект + портфоліо',duration:'4 тижні',topics:['Клон реального сайту','Власний проект','Деплой на Vercel/Netlify','README та GitHub портфоліо'],highlight:'Портфоліо'},
+  ],
+  backend:[
+    {icon:'🌱',label:'Крок 1',title:'Основи програмування',duration:'4–6 тижнів',topics:['Python або Node.js синтаксис','Умови, цикли, функції','Робота з файлами','ООП основи'],highlight:'Python / Node.js'},
+    {icon:'🗄️',label:'Крок 2',title:'Бази даних',duration:'4–5 тижнів',topics:['SQL запити','PostgreSQL / MySQL','JOIN, індекси','ORM бібліотеки'],highlight:'SQL'},
+    {icon:'🔌',label:'Крок 3',title:'REST API',duration:'4–6 тижнів',topics:['HTTP методи','Express / FastAPI','Авторизація JWT','Postman тестування'],highlight:'REST API'},
+    {icon:'📦',label:'Крок 4',title:'Docker та Git',duration:'3–4 тижні',topics:['Контейнери Docker','docker-compose','Git workflow','CI/CD основи'],highlight:'Docker'},
+    {icon:'🚀',label:'Крок 5',title:'Проект + деплой',duration:'4–5 тижнів',topics:['Повноцінний API сервер','Деплой на хмару','Документація Swagger','Тестування юніт-тестами'],highlight:'Деплой'},
+  ],
+  uiux:[
+    {icon:'🌱',label:'Крок 1',title:'Основи дизайну',duration:'3–4 тижні',topics:['Теорія кольору','Типографіка','Сітки та відступи','Принципи UX'],highlight:'Теорія'},
+    {icon:'🖌️',label:'Крок 2',title:'Figma',duration:'5–6 тижнів',topics:['Фрейми та компоненти','Auto Layout','Прототипування','Дизайн-системи'],highlight:'Figma'},
+    {icon:'🔍',label:'Крок 3',title:'UX Research',duration:'3–4 тижні',topics:['User interviews','Persona','Customer Journey Map','Usability testing'],highlight:'UX Research'},
+    {icon:'📐',label:'Крок 4',title:'UI патерни',duration:'3–4 тижні',topics:['Мобільний дизайн','Web UI патерни','Accessibility','Material / iOS guidelines'],highlight:'UI патерни'},
+    {icon:'🚀',label:'Крок 5',title:'Кейси для портфоліо',duration:'4–6 тижнів',topics:['3 повних кейси','Behance / Notion портфоліо','Презентація рішення','Відгук від реальних користувачів'],highlight:'Портфоліо'},
+  ],
+  marketing:[
+    {icon:'🌱',label:'Крок 1',title:'Основи дизайну',duration:'3–4 тижні',topics:['Теорія кольору','Типографіка','Композиція','Брендинг основи'],highlight:'Теорія'},
+    {icon:'🖌️',label:'Крок 2',title:'Figma та Adobe',duration:'5–6 тижнів',topics:['Figma для банерів','Photoshop ретуш','Illustrator вектор','Шаблони та бренд-кіт'],highlight:'Figma / Adobe'},
+    {icon:'📣',label:'Крок 3',title:'Маркетинг-матеріали',duration:'3–4 тижні',topics:['SMM банери','Email-розсилки','Рекламні формати','A/B тести креативів'],highlight:'SMM'},
+    {icon:'🎬',label:'Крок 4',title:'Моушн та відео',duration:'3–4 тижні',topics:['After Effects основи','Анімація банерів','Reels / Stories','Canva Pro'],highlight:'Анімація'},
+    {icon:'🚀',label:'Крок 5',title:'Портфоліо кейси',duration:'3–4 тижні',topics:['5 реальних кейсів','Аналіз метрик CTR','Behance портфоліо','Презентація клієнту'],highlight:'Портфоліо'},
+  ],
+  devops:[
+    {icon:'🌱',label:'Крок 1',title:'Linux та термінал',duration:'4–5 тижнів',topics:['Bash команди','Файлова система','Скрипти','Мережа основи'],highlight:'Linux'},
+    {icon:'📦',label:'Крок 2',title:'Docker',duration:'4–5 тижнів',topics:['Контейнери та образи','Dockerfile','docker-compose','Реєстри образів'],highlight:'Docker'},
+    {icon:'☁️',label:'Крок 3',title:'Cloud та CI/CD',duration:'5–6 тижнів',topics:['AWS / GCP основи','GitHub Actions','Автодеплой','Secrets управління'],highlight:'CI/CD'},
+    {icon:'🔧',label:'Крок 4',title:'Kubernetes та IaC',duration:'5–6 тижнів',topics:['K8s кластер','Helm charts','Terraform','Infrastructure as Code'],highlight:'Kubernetes'},
+    {icon:'📊',label:'Крок 5',title:'Моніторинг та безпека',duration:'3–4 тижні',topics:['Prometheus + Grafana','Логування ELK','Alerting','DevSecOps основи'],highlight:'Моніторинг'},
+  ],
+  'qa-manual':[
+    {icon:'🌱',label:'Крок 1',title:'Основи тестування',duration:'3–4 тижні',topics:['Що таке баг','Тест-кейси та чек-листи','Тест-дизайн техніки','SDLC / STLC'],highlight:'Тест-кейси'},
+    {icon:'🔍',label:'Крок 2',title:'Інструменти QA',duration:'3–4 тижні',topics:['Jira — баг-репорти','TestRail','Confluence','Пріоритети дефектів'],highlight:'Jira'},
+    {icon:'🌐',label:'Крок 3',title:'Веб та API тестування',duration:'3–4 тижні',topics:['Chrome DevTools','Postman REST тести','Charles Proxy','Мережеві запити'],highlight:'Postman'},
+    {icon:'🗄️',label:'Крок 4',title:'SQL та бази даних',duration:'2–3 тижні',topics:['SELECT запити','JOIN таблиць','Перевірка даних в БД','SQLite / PostgreSQL'],highlight:'SQL'},
+    {icon:'🚀',label:'Крок 5',title:'Практика на проекті',duration:'4–5 тижнів',topics:['Регресійне тестування','Smoke тести','Bug advocacy','Звіт по тестуванню'],highlight:'Практика'},
+  ],
+  'qa-auto':[
+    {icon:'🌱',label:'Крок 1',title:'Програмування',duration:'4–6 тижнів',topics:['Python або JS основи','Функції та класи','Обробка помилок','Git'],highlight:'Python / JS'},
+    {icon:'🔍',label:'Крок 2',title:'Playwright / Selenium',duration:'5–6 тижнів',topics:['Локатори елементів','Page Object Model','Кліки та форми','Скріншоти та репорти'],highlight:'Playwright'},
+    {icon:'🔌',label:'Крок 3',title:'API автотести',duration:'3–4 тижні',topics:['Requests / Axios','Перевірка відповідей','Схема валідація','Моки та стаби'],highlight:'API тести'},
+    {icon:'⚙️',label:'Крок 4',title:'CI/CD інтеграція',duration:'2–3 тижні',topics:['GitHub Actions','Запуск тестів на PR','Allure звіти','Паралельний запуск'],highlight:'CI/CD'},
+    {icon:'🚀',label:'Крок 5',title:'Повний тест-фреймворк',duration:'4–5 тижнів',topics:['Архітектура фреймворку','Data-driven testing','Нотифікації по результатах','Портфоліо на GitHub'],highlight:'Фреймворк'},
+  ],
+  pm:[
+    {icon:'🌱',label:'Крок 1',title:'Продуктове мислення',duration:'3–4 тижні',topics:['Product vs Project','Customer Development','Jobs To Be Done','Метрики продукту'],highlight:'Продукт'},
+    {icon:'🔍',label:'Крок 2',title:'Discovery та дослідження',duration:'3–4 тижні',topics:['User interviews','Конкурентний аналіз','Persona та JTBD','Problem framing'],highlight:'UX Research'},
+    {icon:'🗺️',label:'Крок 3',title:'Roadmap та пріоритизація',duration:'3–4 тижні',topics:['RICE / ICE scoring','OKR та метрики','Backlog grooming','Stakeholder mapping'],highlight:'Roadmap'},
+    {icon:'⚙️',label:'Крок 4',title:'Agile та команда',duration:'3–4 тижні',topics:['Scrum / Kanban','Sprint planning','Робота з розробниками','Jira / Notion'],highlight:'Agile'},
+    {icon:'🚀',label:'Крок 5',title:'Власний продукт-кейс',duration:'4–5 тижнів',topics:['Від ідеї до MVP','A/B тести','Аналіз результатів','Презентація інвестору'],highlight:'Кейс'},
+  ],
+  projmgr:[
+    {icon:'🌱',label:'Крок 1',title:'Основи PM',duration:'3–4 тижні',topics:['Проект vs операції','Трикутник обмежень','Scope, time, budget','Stakeholders'],highlight:'PM основи'},
+    {icon:'📋',label:'Крок 2',title:'Agile методології',duration:'3–4 тижні',topics:['Scrum ролі та події','Kanban потік','SAFe основи','Ретроспективи'],highlight:'Agile / Scrum'},
+    {icon:'⚠️',label:'Крок 3',title:'Ризики та комунікація',duration:'2–3 тижні',topics:['Risk register','Ескалація','Звіти статусу','Stakeholder communication'],highlight:'Ризики'},
+    {icon:'🛠️',label:'Крок 4',title:'Інструменти',duration:'2–3 тижні',topics:['Jira адміністрування','MS Project','Confluence wiki','Slack / Teams'],highlight:'Jira'},
+    {icon:'🚀',label:'Крок 5',title:'Реальний проект',duration:'4–5 тижнів',topics:['Веди проект від А до Я','Ретроспектива результатів','PMP / PSM сертифікація','Кейс для портфоліо'],highlight:'Практика'},
+  ],
+  ba:[
+    {icon:'🌱',label:'Крок 1',title:'Основи аналізу',duration:'3–4 тижні',topics:['Бізнес-процеси','Стейкхолдери','As-Is / To-Be аналіз','Типи вимог'],highlight:'Вимоги'},
+    {icon:'📐',label:'Крок 2',title:'Нотації та моделювання',duration:'3–4 тижні',topics:['BPMN 2.0','UML діаграми','Use Case','User Story + критерії'],highlight:'BPMN / UML'},
+    {icon:'🗣️',label:'Крок 3',title:'Збір вимог',duration:'3–4 тижні',topics:['Інтерв\'ю техніки','Воркшопи','Аналіз документів','Спостереження'],highlight:'Інтерв\'ю'},
+    {icon:'🗄️',label:'Крок 4',title:'SQL та дані',duration:'2–3 тижні',topics:['SELECT / JOIN','Аналіз структури БД','Excel зведені таблиці','Power BI основи'],highlight:'SQL'},
+    {icon:'🚀',label:'Крок 5',title:'Специфікація та практика',duration:'4–5 тижнів',topics:['SRS документ','FRD / BRD','Погодження з командою','Портфоліо кейсів'],highlight:'Специфікація'},
+  ],
+  'data-analyst':[
+    {icon:'🌱',label:'Крок 1',title:'Excel та статистика',duration:'3–4 тижні',topics:['Зведені таблиці','Формули та функції','Описова статистика','Розподіли та тренди'],highlight:'Excel'},
+    {icon:'🗄️',label:'Крок 2',title:'SQL',duration:'4–5 тижнів',topics:['SELECT, WHERE, GROUP BY','JOIN кількох таблиць','Підзапити','Window functions'],highlight:'SQL'},
+    {icon:'🐍',label:'Крок 3',title:'Python для аналізу',duration:'5–6 тижнів',topics:['pandas датафрейми','numpy обчислення','matplotlib / seaborn','Jupyter Notebook'],highlight:'Python'},
+    {icon:'📊',label:'Крок 4',title:'Візуалізація та дашборди',duration:'3–4 тижні',topics:['Tableau / Power BI','Google Looker Studio','Storytelling даними','KPI дашборди'],highlight:'Tableau'},
+    {icon:'🚀',label:'Крок 5',title:'Аналітичний проект',duration:'4–5 тижнів',topics:['Реальний датасет','Гіпотези та перевірка','Звіт з інсайтами','Портфоліо на GitHub'],highlight:'Проект'},
+  ],
+  'data-scientist':[
+    {icon:'🌱',label:'Крок 1',title:'Python та математика',duration:'4–6 тижнів',topics:['Python pandas / numpy','Лінійна алгебра основи','Теорія ймовірностей','Статистика'],highlight:'Python'},
+    {icon:'🤖',label:'Крок 2',title:'Machine Learning',duration:'6–8 тижнів',topics:['scikit-learn','Регресія та класифікація','Дерева рішень','Кластеризація'],highlight:'ML'},
+    {icon:'🧠',label:'Крок 3',title:'Deep Learning',duration:'5–6 тижнів',topics:['Нейронні мережі','TensorFlow / PyTorch','CNN для зображень','NLP основи'],highlight:'Deep Learning'},
+    {icon:'⚙️',label:'Крок 4',title:'MLOps та деплой',duration:'3–4 тижні',topics:['MLflow трекінг','Docker для ML','REST API моделі','Feature Store'],highlight:'MLOps'},
+    {icon:'🚀',label:'Крок 5',title:'Kaggle та проект',duration:'4–6 тижнів',topics:['Kaggle змагання','Власна ML модель','GitHub портфоліо','Презентація результатів'],highlight:'Kaggle'},
+  ],
+  hr:[
+    {icon:'🌱',label:'Крок 1',title:'Основи HR та IT',duration:'2–3 тижні',topics:['IT ролі та стек','Цикл найму','Employer branding','HR метрики'],highlight:'HR основи'},
+    {icon:'🔍',label:'Крок 2',title:'Sourcing та LinkedIn',duration:'3–4 тижні',topics:['Boolean search','LinkedIn Recruiter','Холодні меседжі','ATS системи'],highlight:'LinkedIn'},
+    {icon:'🗣️',label:'Крок 3',title:'Інтерв\'ювання',duration:'3–4 тижні',topics:['STAR-метод','Поведінкові питання','Технічний скринінг','Оцінка soft skills'],highlight:'Інтерв\'ю'},
+    {icon:'🤝',label:'Крок 4',title:'Onboarding та розвиток',duration:'2–3 тижні',topics:['Адаптаційний план','1-on-1 зустрічі','Performance review','L&D програми'],highlight:'Onboarding'},
+    {icon:'🚀',label:'Крок 5',title:'HR аналітика',duration:'2–3 тижні',topics:['Time to hire','Retention rate','eNPS','Google Sheets / Looker для HR'],highlight:'Аналітика'},
+  ],
+};
+
+function showRoadmap(profId, fromDetailId, fromRes){
+  const p = PROFESSIONS.find(x=>x.id===profId);
+  const phases = ROADMAPS[profId] || [];
+  const totalWeeks = phases.reduce((acc,ph)=>{
+    const m = ph.duration.match(/(\d+)/);
+    return acc + (m ? parseInt(m[1]) : 0);
+  }, 0);
+
+  document.getElementById('rm-back-btn').onclick = ()=>showPortfolio(profId, fromRes);
+
+  const phaseColors = [p.colorBg, 'rgba(35,192,173,.10)', 'rgba(141,89,255,.08)', p.colorBg, 'rgba(35,192,173,.10)'];
+  const dotBgs = [p.color, '#DCFEBC', '#E2C6FF', p.color, '#DCFEBC'];
+
+  document.getElementById('roadmap-content').innerHTML = `
+    <div class="detail-back" onclick="showPortfolio('${profId}',${fromRes})">&#8592; Назад до прикладів робіт</div>
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
+      <div style="width:56px;height:56px;border-radius:16px;background:${p.colorBg};display:flex;align-items:center;justify-content:center;font-size:28px;flex-shrink:0;">${p.icon}</div>
+      <div>
+        <div class="eyebrow" style="margin-bottom:6px;">Дорожня карта</div>
+        <h2 style="margin-bottom:4px;">${p.name}</h2>
+        <p style="font-size:13px;">&#128336; Орієнтовно ${totalWeeks}–${totalWeeks+6} тижнів до першої роботи</p>
+      </div>
+    </div>
+    <div class="roadmap-phases">
+      ${phases.map((ph,i)=>`
+        <div class="phase">
+          <div class="phase-dot-wrap">
+            <div class="phase-dot" style="background:${dotBgs[i%dotBgs.length]}">${ph.icon}</div>
+            ${i < phases.length-1 ? '<div class="phase-connector"></div>' : ''}
+          </div>
+          <div class="phase-body" style="background:${phaseColors[i%phaseColors.length]};">
+            <div class="phase-num">${ph.label}</div>
+            <div class="phase-title">${ph.title}</div>
+            <div class="phase-duration">&#128336; ${ph.duration}</div>
+            <div class="phase-topics">
+              ${ph.topics.map(t=>`<span class="phase-topic ${t===ph.highlight?'highlight':''}">${t}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+    <div style="padding:16px 20px;border-radius:var(--r-lg);background:rgba(141,89,255,.06);border:1px solid var(--dan-violet-soft);display:flex;gap:12px;align-items:flex-start;">
+      <span style="font-size:20px;flex-shrink:0;">💡</span>
+      <div>
+        <div style="font:700 14px/1.2 var(--font-display);margin-bottom:4px;">Порада</div>
+        <p style="font-size:13px;">Не треба знати все одразу — рухайся крок за кроком. Найголовніше — <strong>практика після кожної теми</strong>. Маленький проект краще великої теорії.</p>
+      </div>
+    </div>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:24px;">
+      <button class="btn btn-primary" onclick="goLead()">Записатися на консультацію 🎓</button>
+      <button class="btn btn-ghost" onclick="showPortfolio('${profId}',${fromRes})">&#8592; Назад</button>
+    </div>`;
+  showScreen('s-roadmap');
+}
+function goExplorer(){
+  document.getElementById('explorer-grid').innerHTML=PROFESSIONS.map(p=>`
+    <div class="exp-card" onclick="showDetail('${p.id}',false)" style="border-top:3px solid ${p.color}">
+      <div class="exp-icon">${p.icon}</div>
+      <div class="exp-name">${p.name}</div>
+      <div class="exp-desc">${p.tagline.substring(0,62)}…</div>
+      <div class="exp-salary">${p.salary}</div>
+    </div>`).join('');
+  showScreen('s-explorer');
+}
+
+/* ── LEAD CAPTURE ── */
+function goLead(){
+  // Personalize the subtitle with the student's result, if we have one.
+  const sub=document.getElementById('lead-subtitle');
+  if(resultProfession && sub){
+    sub.innerHTML='Твій напрямок — <strong>'+resultProfession.name+'</strong>. '+
+      'Залиш контакт і ми розкажемо, як почати навчання саме на ньому.';
+  }
+  showScreen('s-lead');
+}
+
+/*
+  Pass the quiz result into HubSpot as a hidden field.
+
+  HubSpot's embed renders the form inside an <iframe>, so we cannot
+  reach its fields directly from this page. HubSpot exposes an
+  event, "hs-form-event:on-ready" (and a global message), when a
+  form finishes loading. When that fires for OUR form, we set a
+  hidden field named "profession_interest" to the result.
+
+  For this to actually store the value, create a hidden field with
+  the internal name `profession_interest` (or a contact property of
+  that name) in the HubSpot form editor. If the field does not exist,
+  this code fails silently and the form still works normally.
+*/
+window.addEventListener('message', function(event){
+  try{
+    if(event.data && event.data.type==='hsFormCallback' &&
+       event.data.eventName==='onFormReady'){
+      const val = resultProfession ? resultProfession.name : '';
+      if(!val) return;
+      // Find the HubSpot iframe and set the hidden field inside it.
+      const frame=document.querySelector('.hs-form-frame iframe');
+      if(frame && frame.contentDocument){
+        const hidden=frame.contentDocument.querySelector(
+          'input[name="profession_interest"]');
+        if(hidden){
+          hidden.value=val;
+          hidden.dispatchEvent(new Event('input',{bubbles:true}));
+          hidden.dispatchEvent(new Event('change',{bubbles:true}));
+        }
+      }
+    }
+  }catch(e){ /* cross-origin or field missing — ignore, form still works */ }
+});
+</script>
+<!-- HubSpot forms embed loader (EU region) -->
+<script src="https://js-eu1.hsforms.net/forms/embed/148955052.js" defer></script>
+</body>
+</html>
